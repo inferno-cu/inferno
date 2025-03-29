@@ -2,6 +2,7 @@
     "compilerOptions": {
     "declaration": false,
     "importHelpers": true,
-    "sourceMap": true
-   }
+    "sourceMap": true,
+    "skipDefaultLibCheck": true
+    }
 }
