@@ -5,5 +5,8 @@
 	"scripts": {
 		"dev": "cmatrix"
 	},
-	"private": true
+	"private": true,
+	"devDependencies": {
+		"nx": "^20.7.0"
+	}
 }
