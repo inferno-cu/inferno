@@ -6,8 +6,8 @@
     "tags": [],
     "// targets": "to see all targets run: nx show project arch --web",
     "targets": {
-      "start": {
-        "command": "nix-shell",
+      "dev": {
+        "command": "likec4 dev",
         "options": {
           "cwd": "apps/arch"
         }
