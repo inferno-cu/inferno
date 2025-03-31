@@ -1,0 +1,163 @@
+layout {
+    tab name="🔥 Priority" focus=true hide_floating_panes=true {
+        pane size=1 borderless=true {
+            plugin location="zellij:tab-bar"
+        }
+        pane split_direction="vertical" {
+        pane split_direction="horizontal" {
+            pane command="pnpm" name="📚 Docs | 4000 | docs.inferno.dev" cwd="../" {
+                args "nx" "dev" "docs"
+            }
+            pane size="80%" command="pnpm" name="💿 Database | 5432 | Nix-PostgreSQL" close_on_exit=true cwd="../" {
+                args "nx" "up" "infra"
+            }
+            }
+
+        pane split_direction="horizontal" {
+                pane command="pnpm" name="🏛 Slides | 3030 | slides.inferno.dev" cwd="../" {
+                    args "nx" "dev" "slides"
+                }
+        pane command="cacafire" name="cacafire" {
+            start_suspended true
+        }
+        pane command="cmatrix" name="cmatrix" {
+            args "-C" "red"
+        }
+        }
+        pane split_direction="horizontal" {
+            pane command="pnpm" name="🗺 Project Graph - Nx | 4211 | graph.inferno.dev" cwd="../" {
+                    args "nx" "graph" "--groupByFolder" "--open='false'" "--verbose"
+                }
+        pane command="fastfetch" name="fastfetch" {
+        }
+        pane command="sh" name="figlet" {
+            args "-c" "figlet -f slant 'Inhale Speed, Exhale Power' | tte burn --starting-color ff0000 --final-gradient-stops eabb00 f45f00 ff0000 --final-gradient-steps 12 --final-gradient-direction horizontal"
+        }
+        }
+    }
+        floating_panes {
+            pane command="atac" name="{A}rguably a {T}erminal {A}PI {C}lient" {
+                args "--no-ansi-log"
+            }
+        }
+        pane size=1 borderless=true {
+            plugin location="zellij:status-bar"
+        }
+        }
+    tab name="💿 Database" {
+        pane size=1 borderless=true {
+            plugin location="zellij:tab-bar"
+        }
+        pane command="lazysql" name="Lazysql" {
+            args "postgres://postgres:password@127.0.0.1:5432/postgres?sslmode=disable"
+        }
+        pane size=1 borderless=true {
+            plugin location="zellij:status-bar"
+        }
+    }
+    tab name="👀 Previews" hide_floating_panes=true {
+        pane size=1 borderless=true {
+            plugin location="zellij:tab-bar"
+        }
+                pane command="browsh" name="Web Browser Preview" cwd="../" {
+                    args "http://localhost:4000" "http://localhost:3030"
+                    start_suspended true
+                }
+        pane size=1 borderless=true {
+            plugin location="zellij:status-bar"
+        }
+    }
+    tab name="🍒 Git" hide_floating_panes=true {
+        pane size=1 borderless=true {
+            plugin location="zellij:tab-bar"
+        }
+        pane command="lazygit" name="Lazygit" {
+        }
+        pane size=1 borderless=true {
+            plugin location="zellij:status-bar"
+        }
+
+        floating_panes {
+            pane command="pnpm" name="🧼 Perform a clean install" cwd="../" {
+                start_suspended true
+                height 25
+                width 86
+                x 43
+                y 14
+                args "ri"
+            }
+        }
+    }
+    tab name="📁 Files" {
+        pane size=1 borderless=true {
+            plugin location="zellij:tab-bar"
+        }
+        pane command="yazi" name="Yazi" {
+        }
+        pane size=1 borderless=true {
+            plugin location="zellij:status-bar"
+        }
+        floating_panes {
+            pane command="rm" name="🚨 WARNING: Delete local database?" cwd="../" {
+                start_suspended true
+                height 25
+                width 86
+                x 43
+                y 14
+                args "-rf" "apps/admin/media" "infra/pgdata"
+            }
+        }
+    }
+    tab name="🩺 Health" hide_floating_panes=true {
+        pane size=1 borderless=true {
+            plugin location="zellij:tab-bar"
+        }
+        pane command="btop" name="btop" {
+        }
+        pane size=1 borderless=true {
+            plugin location="zellij:status-bar"
+        }
+    }
+     tab name="🧮 Systemctl" hide_floating_panes=true {
+        pane size=1 borderless=true {
+            plugin location="zellij:tab-bar"
+        }
+        pane command="systemctl-tui" name="systemctl" {
+        }
+        pane size=1 borderless=true {
+            plugin location="zellij:status-bar"
+        }
+    }
+     tab name="🤖 AI Chatbot" hide_floating_panes=true {
+        pane size=1 borderless=true {
+            plugin location="zellij:tab-bar"
+        }
+        pane command="tgpt" name="TGPT" {
+        args "-m"
+        }
+        pane size=1 borderless=true {
+            plugin location="zellij:status-bar"
+        }
+    }
+     tab name="🦈 Termshark" hide_floating_panes=true {
+        pane size=1 borderless=true {
+            plugin location="zellij:tab-bar"
+        }
+        pane command="termshark" name="termshark" {
+        }
+        pane size=1 borderless=true {
+            plugin location="zellij:status-bar"
+        }
+    }
+     tab name="🧮 Network" hide_floating_panes=true {
+        pane size=1 borderless=true {
+            plugin location="zellij:tab-bar"
+        }
+        pane command="sudo" name="netscanner" {
+            args "netscanner"
+        }
+        pane size=1 borderless=true {
+            plugin location="zellij:status-bar"
+        }
+    }
+}
