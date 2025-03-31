@@ -8,6 +8,10 @@ layout {
             pane command="pnpm" name="📚 Docs | 4000 | docs.inferno.dev" cwd="../" {
                 args "nx" "dev" "docs"
             }
+            pane size="50%" command="pnpm" name="📚 Arch | 5173 | arch.inferno.dev" cwd="../" {
+                args "nx" "dev" "arch"
+                start_suspended true
+            }
             pane size="80%" command="pnpm" name="💿 Database | 5432 | Nix-PostgreSQL" close_on_exit=true cwd="../" {
                 args "nx" "up" "infra"
             }
