@@ -1,0 +1,139 @@
+@import 'tailwindcss';
+@import 'fumadocs-ui/css/black.css';
+@import 'fumadocs-ui/css/preset.css';
+
+@source '../../node_modules/fumadocs-ui/dist/**/*.js';
+@source "./components/ui/**/*.{ts,tsx}";
+@source './components/ui/**/*.stories.{ts,tsx}';
+@source '../../apps/docs{src,components,app,content}/**/*!(*.stories|*.spec).{ts,tsx,md,mdx,html}';
+@source '../../apps/docs/content/docs/**/*.{md,mdx}';
+@source '../../libs/shared/**/*.{ts,tsx,md,mdx}';
+
+@plugin "tailwindcss-animate";
+
+/* @custom-variant dark (&:is(.dark *)); */
+
+@layer base {
+  :root {
+    --background: hsl(0 0% 95%);
+    --foreground: hsl(0 0% 10%);
+    --card: hsl(0 0% 90%);
+    --card-foreground: hsl(0 0% 15%);
+    --popover: hsl(0 0% 95%);
+    --popover-foreground: hsl(0 85% 15%);
+    --primary: hsl(0 75% 55%);
+    --primary-foreground: hsl(0 0% 100%);
+    --secondary: hsl(0 10% 70%);
+    --secondary-foreground: hsl(0 0% 10%);
+    --muted: hsl(0 10% 85%);
+    --muted-foreground: hsl(0 0% 35%);
+    --accent: hsl(0 10% 80%);
+    --accent-foreground: hsl(0 0% 15%);
+    --destructive: hsl(0 65% 40%);
+    --destructive-foreground: hsl(0 0% 95%);
+    --border: hsl(0 20% 60%);
+    --input: hsl(0 20% 18%);
+    --ring: hsl(0 75% 55%);
+    --radius: 0.5rem;
+  }
+
+  .dark {
+    --background: hsl(0 0% 0%);
+    --foreground: hsl(0 0% 95%);
+    --card: hsl(0 0% 0%);
+    --card-foreground: hsl(0 0% 85%);
+    --popover: hsl(0 10% 10%);
+    --popover-foreground: hsl(0 0% 90%);
+    --primary: hsl(0 75% 55%);
+    --primary-foreground: hsl(0 0% 100%);
+    --secondary: hsl(0 10% 20%);
+    --secondary-foreground: hsl(0 0% 95%);
+    --muted: hsl(0 10% 25%);
+    --muted-foreground: hsl(0 0% 60%);
+    --accent: hsl(0 10% 25%);
+    --accent-foreground: hsl(0 0% 90%);
+    --destructive: hsl(0 65% 40%);
+    --destructive-foreground: hsl(0 0% 95%);
+    --border: hsl(0 0% 100% / 15%);
+    --input: hsl(0 20% 18%);
+    --ring: hsl(0 75% 55%);
+  }
+}
+
+@theme {
+  --color-fd-background: var(--background);
+  --color-fd-foreground: var(--foreground);
+  --color-fd-card: var(--card);
+  --color-fd-card-foreground: var(--card-foreground);
+  --color-fd-popover: var(--popover);
+  --color-fd-popover-foreground: var(--popover-foreground);
+  --color-fd-primary: var(--primary);
+  --color-fd-primary-foreground: var(--primary-foreground);
+  --color-fd-secondary: var(--secondary);
+  --color-fd-secondary-foreground: var(--secondary-foreground);
+  --color-fd-muted: var(--muted);
+  --color-fd-muted-foreground: var(--muted-foreground);
+  --color-fd-accent: var(--accent);
+  --color-fd-accent-foreground: var(--accent-foreground);
+  --color-fd-destructive: var(--destructive);
+  --color-fd-destructive-foreground: var(--destructive-foreground);
+  --color-fd-border: var(--border);
+  --color-fd-input: var(--input);
+  --color-fd-ring: var(--ring);
+  --border-fd-radius: var(--radius);
+  --color-primary: var(--primary);
+  --color-secondary: var(--secondary);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-destructive: var(--destructive);
+  --color-destructive-foreground: var(--destructive-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-1: var(--color-1);
+  --color-2: var(--color-2);
+  --color-3: var(--color-3);
+  --color-4: var(--color-4);
+  --color-5: var(--color-5);
+  --radius-lg: var(--radius);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-sm: calc(var(--radius) - 4px);
+}
+
+.dark {
+  --color-fd-background: var(--background);
+  --color-fd-foreground: var(--foreground);
+  --color-fd-card: var(--card);
+  --color-fd-card-foreground: var(--card-foreground);
+  --color-fd-popover: var(--popover);
+  --color-fd-popover-foreground: var(--popover-foreground);
+  --color-fd-primary: var(--primary);
+  --color-fd-primary-foreground: var(--primary-foreground);
+  --color-fd-secondary: var(--secondary);
+  --color-fd-secondary-foreground: var(--secondary-foreground);
+  --color-fd-muted: var(--muted);
+  --color-fd-muted-foreground: var(--muted-foreground);
+  --color-fd-accent: var(--accent);
+  --color-fd-accent-foreground: var(--accent-foreground);
+  --color-fd-destructive: var(--destructive);
+  --color-fd-destructive-foreground: var(--destructive-foreground);
+  --color-fd-border: var(--border);
+  --color-fd-input: var(--input);
+  --color-fd-ring: var(--ring);
+  --border-fd-radius: var(--radius);
+}
+
+#nd-subnav>div>button+div>div:first-child {
+  justify-self: flex-start;
+  flex-grow: 2;
+}

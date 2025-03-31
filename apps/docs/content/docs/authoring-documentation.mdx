@@ -1,0 +1,55 @@
+---
+title: Authoring Documentation
+description: Bridge the gap between your brain and the rest of us.
+icon: PencilLine
+---
+
+import { Accordion, Accordions } from "fumadocs-ui/components/accordion";
+
+<Cards>
+  <Card
+    title={
+      "How to write good docs - Fuma Nama, author of the framework used to build this site"
+    }
+    href={`https://fuma-nama.vercel.app/blog/good-docs`}
+    description={`Write code, and you may solve a problem. Write documentation, and you'll solve many problems before they even happen.`}
+  />
+  <Card
+    title={
+      "Markdown Basic Syntax"
+    }
+    href={`https://www.markdownguide.org/basic-syntax/`}
+  />
+</Cards>
+
+### Use Headings
+Use [GFM](https://docs.github.com/en/get-started/writing-on-github/getting-started-with-writing-and-formatting-on-github/basic-writing-and-formatting-syntax).
+<Accordions>
+<Accordion title="What's GFM?">
+GFM stands for 'GitHub Flavoured Markdown'.
+</Accordion>
+</Accordions>
+
+- Use **bold** to allow skimming.
+- Use **Lists** to express key points instead of using English connectives.
+- Use **Tables** to express different things like conditions, and properties.
+  - This is particularly powerful to avoid having a lot of 'if's to describe complex conditions.
+    - Bullet points can be nested too.
+
+```ts title="Code Snippet"
+// [!code word:useCodeBlocks]
+if (docs.content === 'TECHNICAL'){ // [!code highlight]
+useCodeBlocks()
+console.log('Deleted code'); // [!code --]
+console.log('Added code'); // [!code ++]
+}
+```
+
+Icons are from [Lucide Icons](https://lucide.dev/).
+
+<iframe
+title="Lucide Icons Website"
+className="mt-4 w-full h-[400px] rounded-lg"
+src="https://lucide.dev/"
+allowFullScreen>
+</iframe>

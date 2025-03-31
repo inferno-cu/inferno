@@ -1,0 +1,142 @@
+---
+title: Overview
+description: Inhale speed, Exhale power.
+icon: Flame
+---
+
+import Link from 'next/link';
+import {ColourfulText} from "@/shared/ui/colourful-text";
+import {
+  AnimatedSpan,
+  Terminal,
+} from "@/shared/ui/terminal";
+import{ LampContainer } from "@/shared/ui/lamp";
+
+    <LampContainer>
+ <Terminal>
+      <AnimatedSpan delay={500} className="text-yellow-500">
+        <span>✔ sudo pacman -Syu</span>
+      </AnimatedSpan>
+
+      <AnimatedSpan delay={750} className="text-amber-500">
+<span>:: Synchronizing package databases...</span>
+      </AnimatedSpan>
+      <AnimatedSpan delay={1000} className="text-amber-500">
+ <span>core             117.5 KiB   180 KiB/s 00:01 [----------------------------------] 100%</span>
+      </AnimatedSpan>
+      <AnimatedSpan delay={1250} className="text-amber-500">
+ <span>extra              7.7 MiB  7.10 MiB/s 00:01 [----------------------------------] 100%</span>
+      </AnimatedSpan>
+      <AnimatedSpan delay={1500} className="text-amber-500">
+ <span>multilib         133.0 KiB   191 KiB/s 00:01 [----------------------------c-o-o-] 100%</span>
+      </AnimatedSpan>
+      <AnimatedSpan delay={1750} className="text-amber-500">
+<span>::Starting full system upgrade...</span>
+      </AnimatedSpan>
+      <AnimatedSpan delay={2000} className="text-amber-500">
+<span>resolving dependencies...</span>
+      </AnimatedSpan>
+      <AnimatedSpan delay={2250} className="text-amber-500">
+<span>looking for conflicting packages...</span>
+      </AnimatedSpan>
+      <AnimatedSpan delay={2500} className="text-amber-500">
+<span>:: Retrieving packages...</span>
+      </AnimatedSpan>
+      <AnimatedSpan delay={2750} className="text-amber-500">
+<span>:: Processing package changes...</span>
+      </AnimatedSpan>
+      <AnimatedSpan delay={3000} className="text-amber-500">
+<span>:: Running post-transaction hooks...</span>
+      </AnimatedSpan>
+      <AnimatedSpan delay={3250} className="text-amber-500">
+<span className="bg-gradient-to-r from-yellow-500 via-amber-500 to-orange-500 bg-clip-text text-transparent px-2 font-bold text-xl text-center">
+Welcome to the documentation site for <Link href="/"><ColourfulText text="Inferno."/></Link>
+</span>
+      </AnimatedSpan>
+    </Terminal>
+    </LampContainer>
+
+## Meet the Team
+
+<Cards>
+<Card
+    title="Muhammad Maisam"
+    description={
+    <>
+    <li>3rd Year Software Engineering</li>
+    </>}
+    href="https://www.linkedin.com/in/muhammadmaisam01/"
+    icon={
+      <img
+        src="https://media.licdn.com/dms/image/v2/D5603AQE-DYlrUhep3w/profile-displayphoto-shrink_800_800/B56ZWwd0.hGUAc-/0/1742422365225?e=1748476800&v=beta&t=i9GabsS91UAIyn7MeXgahGuh6B7tlujA3tzbndJtpgM"
+        alt="Muhammad Maisam Picture"
+        width={24}
+        height={24}
+      />
+      }
+/>
+<Card
+    title="Anirudh Mahesh"
+    description={
+    <>
+    <li>3rd Year Computer Science</li>
+    </>}
+    href="https://www.linkedin.com/in/anirudh-mahesh/"
+    icon={
+      <img
+        src="https://avatars.githubusercontent.com/u/109389814?v=4"
+        alt="Anirudh Mahesh Picture"
+        width={24}
+        height={24}
+      />
+      }
+/>
+<Card
+    title="Sanil Srivastava"
+    description={
+    <>
+    <li>3rd Year Software Engineering</li>
+    </>}
+    href="https://www.linkedin.com/in/sanil-srivastava/"
+    icon={
+      <img
+        src="https://media.licdn.com/dms/image/v2/D5603AQFqXs0c3tgBiw/profile-displayphoto-shrink_800_800/profile-displayphoto-shrink_800_800/0/1674777087033?e=1748476800&v=beta&t=HaweYe5stfs3Ro-7opT8UjJLO_vgnbKogjRZyJVUvOQ"
+        alt="Sanil Srivastava Picture"
+        width={24}
+        height={24}
+      />
+      }
+/>
+<Card
+    title="Rohan Sreelesh"
+    description={
+    <>
+    <li>4th Year Computer Science</li>
+    </>}
+    href="https://www.linkedin.com/in/rohansreelesh/"
+    icon={
+      <img
+        src="https://media.licdn.com/dms/image/v2/D4D03AQHM2l-qHrONhQ/profile-displayphoto-shrink_400_400/B4DZWeg80uHIAg-/0/1742121193038?e=1748476800&v=beta&t=DPBal6Fn41ZMTpvWzrrKuQrN3906K75GmZZvyDAZvb8"
+        alt="Rohan Sreelesh Picture"
+        width={24}
+        height={24}
+      />
+      }
+/>
+<Card
+    title="Mumtahin Farabi"
+    description={
+    <>
+    <li>2nd Year Computer Science - Minor in Business</li>
+    </>}
+    href="https://www.linkedin.com/in/mfarabi/"
+    icon={
+      <img
+        src="https://media.licdn.com/dms/image/v2/D4E03AQFpxJLWWAf_Sw/profile-displayphoto-shrink_800_800/profile-displayphoto-shrink_800_800/0/1730870018543?e=1748476800&v=beta&t=cq2QPOUMUnSknzEzdMuARz0GXcvK3No2NlGJTw8tsXQ"
+        alt="Mumtahin Farabi Picture"
+        width={24}
+        height={24}
+      />
+      }
+/>
+</Cards>

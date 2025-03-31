@@ -1,0 +1,19 @@
+{
+  "root": true,
+  "pages": [
+    "--- Introduction ---",
+    "index",
+    "features",
+    "tech-stack",
+    "market-research",
+    "--- Contribution Guidelines ---",
+    "getting-started",
+    "authoring-documentation",
+    "--- Concepts ---",
+    "diataxis-model",
+    "--- Reference ---",
+    "glossary",
+    "--- Troubleshooting ---",
+    "common-issues"
+  ]
+}
