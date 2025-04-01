@@ -1,9 +1,9 @@
 [build]
-publish = "dist"
-command = "npm run build"
+publish = "apps/slides/dist"
+command = "pnpm nx build slides"
 
 [build.environment]
-NODE_VERSION = "20"
+NODE_VERSION = "22"
 
 [[redirects]]
 from = "/.well-known/*"
