@@ -114,7 +114,6 @@ model {
   
   // Return path for commands
   cloudBroker -> gateways "sends commands through"
-  cloudBroker -> gateways "sends commands through"
   gateways -> routerDaemon "forwards incoming traffic to" 
   cloudBroker -> gateways "routes inbound commands to"
   gateways -> mqttBridge "routes inbound commands to"
