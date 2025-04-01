@@ -837,3 +837,15 @@ class: text-center
 </a>
 ---
 
+<!--Slide 36-->
+# Market Research
+
+## D-Link Router
+  <div class="relative w">
+  <img src="/dlink_top_without_heat_sync.jpg">
+  <img src="/dlink_top_with_heat_sync.jpg" alt="Clickable Image" width="1/5">
+  <img src="/dlink_bottom.jpg" alt="Clickable Image" width="100">
+  <img src="/dlink_closed.jpg" alt="Clickable Image" width="50">
+  <img src="/dlink_rear.jpg" alt="Clickable Image" width="50">
+</div>
+---
