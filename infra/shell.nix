@@ -29,7 +29,7 @@ in pkgs.mkShell {
     pkgs.tgpt
     pkgs.termshark
     pkgs.terminaltexteffects
-    pkgs.netscanner
+    # pkgs.netscanner
   ];
 
   shellHook = ''
