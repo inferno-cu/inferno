@@ -24,6 +24,9 @@ model {
   technician = actor "Technician" {
     description "User who configures the SkyLink system"
   }
+  remoteTechnician = actor "Remote Technician" {
+    description "User who configures/observes the SkyLink system remotely"
+  }
   
   user = actor "End User" {
     description "Person or device sending/receiving data through the SkyLink router"
@@ -45,6 +48,10 @@ model {
     mqttBroker = component "MQTT Broker" {
       description "Central message broker for internal system communication"
     }
+    
+    mqttBridge = component "MQTT Bridge" {
+      description "Bridges internal MQTT traffic to external networks and vice-versa"
+    }
 
     routerDaemon = component "Router Daemon" {
       description "Central C++ daemon managing overall connectivity and making routing decisions"
@@ -59,36 +66,59 @@ model {
   // External Systems
   gateways = external_system "Gateways" {
     description "Network Gateways"
-  satellite = external_system_component "Satellite Network" {
-    description "Satellite communication network for data transmission"
+    
+    satellite = external_system_component "Satellite Network" {
+      description "Satellite communication network for data transmission"
+    }
+    
+    cellular = external_system_component "Cellular Network" {
+      description "Cellular/mobile network for data transmission"
+    }
   }
   
-  cellular = external_system_component "Cellular Network" {
-    description "Cellular/mobile network for data transmission"
-  }}
-  
+  cloudServices = external_system "Cloud Services" {
+    description "Remote command and control services"
+    
+    cloudBroker = external_system_component "Cloud MQTT Broker" {
+      description "External MQTT broker for cloud-based communication"
+    }
+    
+    commandService = external_system_component "Command Service" {
+      description "Service for generating remote commands"
+    }
+  }
 
   skytroo = external_system "Skytrac TrooTrac" {
-      description "Manage fleets using live location"
+    description "Manage fleets using live location"
   }
 
   // External relationships
   technician -> webUI "uses to configure and monitor"
-  // mqttBroker -> gateways "Send REST POST(NEED TO CHANGE SKYTROOO)"
-  skytroo -> mqttBroker "subscribes to location updates"
-  gateways -> skytroo "publish "
   
-  // Routing data through satellite or cellular
-  routerDaemon -> satellite "routes via when optimal (based on LCR decision)"
-  routerDaemon -> cellular "routes via when optimal (based on LCR decision)"
+  // MQTT communication flows
+  mqttBroker -> mqttBridge "bi-directional message flow"
+  mqttBridge -> mqttBroker "bi-directional message flow"
   
-  // Return traffic flow
-  satellite -> routerDaemon "forwards return traffic to"
-  cellular -> routerDaemon "forwards return traffic to"
+  // MQTT Bridge to gateways
+  mqttBridge -> gateways "sends outbound messages through"
+  
+  // Router daemon connectivity
+  routerDaemon -> gateways "routes traffic through"
+  
+  // Gateway to cloud broker
+  gateways -> cloudBroker "forwards MQTT messages to"
+  
+  // Cloud broker connections
+  cloudBroker -> skytroo "forwards location and telemetry to"
+  commandService -> cloudBroker "publishes commands to"
+  
+  // Return path for commands
+  cloudBroker -> gateways "sends commands through"
+  gateways -> routerDaemon "forwards incoming traffic to" 
+  cloudBroker -> gateways "routes inbound commands to"
+  gateways -> mqttBridge "routes inbound commands to"
 
-  satellite -> user "forwards traffic"
-  cellular -> user "forwards traffic"
-
+  remoteTechnician -> cloudBroker "Sends commands through"
   
   
   // Internal MQTT communication with subscription pattern
@@ -97,15 +127,19 @@ model {
   
   gpsService -> mqttBroker "publishes location updates to"
   routerDaemon -> mqttBroker "subscribes to location data on"
+  mqttBridge -> mqttBroker "subscribes to outbound data topics on"
   
   routerDaemon -> mqttBroker "publishes connection metrics and routing decisions to"
   webUI -> mqttBroker "subscribes to status updates and traffic data on"
+  
+  // Connection manager for network interface handling
+  lcrEngine -> gateways "oubound network packets"
 }
 
 views {
   view index of skylink {
     title "SkyLink Router - System Landscape"
-    include *
+    include * , cloudBroker, skytroo, remoteTechnician
   }
   
   view routerDaemon of routerDaemon {
@@ -118,8 +152,18 @@ views {
     include *
   }
 
-  view {
-    title "Location Updates for Skytrac TrooTrax"
-    include gpsService,mqttBroker,skytroo
+  view mqttBridgeFlow {
+    title "MQTT Bridge Data Flow"
+    include mqttBroker, mqttBridge, routerDaemon, gateways, cloudBroker
+  }
+  
+  view locationUpdates {
+    title "Location Updates for Skytrac TrooTrac"
+    include gpsService, mqttBroker, mqttBridge, gateways, cloudBroker, skytroo
+  }
+  
+  view remoteCommands {
+    title "Remote Command Flow"
+    include commandService, cloudBroker, gateways, mqttBridge, mqttBroker
   }
 }
