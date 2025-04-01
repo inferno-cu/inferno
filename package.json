@@ -28,6 +28,7 @@
         "@eslint/compat": "^1.1.1",
         "@eslint/eslintrc": "^2.1.1",
         "@eslint/js": "^9.8.0",
+        "@netlify/edge-functions": "^2.11.1",
         "@nx/devkit": "20.6.2",
         "@nx/eslint": "20.6.2",
         "@nx/eslint-plugin": "20.6.2",
@@ -62,6 +63,7 @@
         "katex": "^0.16.21",
         "likec4": "^1.27.1",
         "lucide-react": "^0.483.0",
+        "netlify-cli": "^17.38.1",
         "nx": "20.6.2",
         "postcss": "^8.5.3",
         "prettier": "^2.6.2",
@@ -79,8 +81,10 @@
             "@parcel/watcher",
             "@swc/core",
             "esbuild",
+            "netlify-cli",
             "nx",
-            "sharp"
+            "sharp",
+            "unix-dgram"
         ]
     }
 }
