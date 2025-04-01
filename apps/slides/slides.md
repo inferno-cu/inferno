@@ -202,6 +202,8 @@ transition: fade-out
 </a>
 ---
 
+<!--Slide 36-->
+# Market Research
 
 ## D-Link Router
   <div class="relative w">
