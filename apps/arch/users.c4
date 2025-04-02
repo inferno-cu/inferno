@@ -1,0 +1,109 @@
+model{
+    context users{
+        title: "Users"
+        description: "Any individual or group of individuals"
+        style {
+            color purple-500
+            shape: person
+            multiple: true
+            opacity: 30%
+            }
+        container team-inferno{
+           title:"Team Inferno"
+           description "The Dreamteam" 
+           style{
+            color red-500
+            shape: person
+            multiple: true
+            opacity: 30%
+           }
+        
+            persona Sanil {
+                title: "Sanil"
+                description: "idk"
+                icon: https://media.licdn.com/dms/image/v2/D5603AQFqXs0c3tgBiw/profile-displayphoto-shrink_800_800/profile-displayphoto-shrink_800_800/0/1674777087033?e=1749081600&v=beta&t=D_jKOW9Uza7eA84RuTHL_inc-bCcHlccq-WYrUn9-j4
+                link : https://www.linkedin.com/in/sanil-srivastava/
+                style{
+                    color sky-500
+                }
+            }
+
+            persona Farabi {
+                title: "Farabi"
+                description: "The GOAT"
+                icon: https://media.licdn.com/dms/image/v2/D4E03AQFpxJLWWAf_Sw/profile-displayphoto-shrink_800_800/profile-displayphoto-shrink_800_800/0/1730870018543?e=1749081600&v=beta&t=bHb6GsIYhJOtkxK6lb7Uq3tdSMe_y6kJGl1gvVi7xZE
+                link : https://www.linkedin.com/in/mfarabi/
+                style{
+                    color purple-500
+                }
+            }
+
+            persona Rohan {
+                title: "Rohan"
+                description: " goat pt.2"
+                icon: https://media.licdn.com/dms/image/v2/D4D03AQHM2l-qHrONhQ/profile-displayphoto-shrink_800_800/B4DZWeg80uHIAc-/0/1742121193038?e=1749081600&v=beta&t=6-07fkqE4drvx99DsjRoMXl19BPnRS-Ukkyo4_8CrLk
+                link : https://www.linkedin.com/in/rohansreelesh/
+                style{
+                    color red
+                    shape person
+                }
+            }
+
+            persona Anirudh{
+                title: "Anirudh"
+                description "web dev demon"
+                icon: https://media.licdn.com/dms/image/v2/D4E35AQFk7F6QCQSCQg/profile-framedphoto-shrink_800_800/profile-framedphoto-shrink_800_800/0/1706935411723?e=1744156800&v=beta&t=Rk4WmGJAX2vTeTVaY8RvqAtPXgT0Qu-Mksoew7nq17g
+                link : https://www.linkedin.com/in/anirudh-mahesh/
+                style{
+                    color orange-500
+                }
+            }
+
+            persona Maisam{
+                title: "Maisam"
+                description "docs/research master"
+                icon: https://media.licdn.com/dms/image/v2/D5603AQE-DYlrUhep3w/profile-displayphoto-shrink_800_800/B56ZWwd0.hGUAc-/0/1742422365225?e=1749081600&v=beta&t=37JH_U8kwnaOpe-o7Hp0n5r8wmJ4fuANz9eY7GQFbTA
+                link : https://www.linkedin.com/in/muhammadmaisam01/
+                style{
+                    color yellow-500
+                }
+            }
+        }
+
+        container skytrac{
+            title: "SKYTRAC"
+            description "The United Front"
+            style{
+                color gray-500
+                shape: person
+                multiple: true
+                opacity: 30%
+            }
+            
+            persona emmanuel-gravel{
+                title: "Emmanuel Gravel"
+                description: "Senior Software Engineer"
+                icon: https://media.licdn.com/dms/image/v2/C4E03AQHzbptLKNEYRQ/profile-displayphoto-shrink_400_400/profile-displayphoto-shrink_400_400/0/1581536669080?e=1749081600&v=beta&t=mUnzhDGwq1qCyaSNDLtxe93EaSNZGD3jZms69Tc6klw
+                link : https://www.linkedin.com/in/emmanuel-gravel-a19a492/
+
+                style{
+                    color gray-500
+                }
+
+            }
+
+            persona joe-lee{
+                title: "Joe Lee"
+                description: " Software Engineering Manager"
+                icon: https://media.licdn.com/dms/image/v2/C5603AQGbu5k13kU0sg/profile-displayphoto-shrink_400_400/profile-displayphoto-shrink_400_400/0/1659190990679?e=1749081600&v=beta&t=eKWQuuu9Ah2uC52cHMjXLIndeonL5jNYh5iHtZKJn_I
+                link : https://www.linkedin.com/in/joseph-lee-11a7aa46/
+
+                style{
+                    color gray-500
+                }
+
+            }
+        }
+
+    }
+}

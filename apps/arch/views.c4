@@ -1,0 +1,45 @@
+
+views {
+    view index {
+        title: "System Context"
+        description: "Top-level Overview"
+        include *
+        exclude external-providers -> platform
+    }
+
+    view users of users {
+        include *
+    }
+
+    view of users.team-inferno {
+        include *
+    }
+
+
+    view of users.skytrac {
+        include *
+    }
+
+    view external-providers of external-providers {
+        include *
+        include management.**
+        include communication.**
+        include ui-ux-design.**
+        include software-development.**
+    }
+
+    view platform of platform {
+    title: "2025 Platform Architecture"
+        description: "Deployed collection of custom software, powered by Axiom,
+a meta-framework created by the Design, and Development Team."
+        include *
+        include presentation.*
+        include documentation.*
+        include backend.*
+        include api.*
+        include databases.*
+        include external-providers.software-development._
+    	autoLayout RightLeft
+	}
+
+}

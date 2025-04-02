@@ -1,0 +1,260 @@
+model {
+    context platform {
+        title: "Platform"
+        icon: https://avatars.githubusercontent.com/u/205461325?s=200&v=4
+        link: https://github.com/inferno-cu/inferno
+        style {
+            color: green
+            shape: browser
+            multiple true
+            opacity: 50%
+        }
+
+        container presentation {
+            title: "👀 Presentation"
+            style {
+                color: indigo
+                opacity: 10%
+            }
+
+            admin = component {
+                title: "Admin"
+                technology: "JavaScript, React, React Native"
+                icon: https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/react/react-original.svg
+                link: https://admin.infernet.work
+                style {
+                    color: indigo-950
+                    shape: browser
+                }
+            }
+
+
+            slides = component {
+                title: "Slide Deck"
+                technology: "TypeScript, Vue.js, Slidev, MDC, UnoCSS"
+                icon: https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/vuejs/vuejs-original.svg
+                link: https://slides.infernet.work
+                style {
+                    color: indigo-950
+                    shape: browser
+                }
+            }
+
+        }
+
+        documentation = container {
+            title: "Documentation"
+            style {
+                color: gray
+                opacity: 40%
+            }
+            docs-site = component {
+                title: "Docs"
+                icon: tech:nextjs
+                technology: "TypeScript, Fumadocs, Next.js, MDX, Tailwind CSS"
+                description: "Technical guidelines & best practices"
+                link: https://docs.infernet.work
+                style {
+                    color: green
+                    shape: browser
+                }
+            }
+
+            brand-site = component {
+                title: "Branding"
+                technology: "TypeScript, Storybook, React, Component Story Format (CSF)"
+                description: "Design System documentation and Brand Guidelines"
+                icon: tech:storybook
+                link: https://design.infernet.work
+                style {
+                    color: purple-800
+                    shape: browser
+                }
+            }
+
+            architecture-site = component {
+                title: "Architecture"
+                technology: 'LikeC4, C4 Model, React'
+                icon https://avatars.githubusercontent.com/u/128791862?s=200&v=4
+                link: https://design.infernet.work
+                style {
+                    color: blue-700
+                    shape: browser
+                }
+            }
+
+            graph-site = component {
+                title: "Project Graph"
+                icon: https://camo.githubusercontent.com/30fd89042b9d367be3b5f04ba1c73083048eb94d3ae5d84f0b50287092c424a6/68747470733a2f2f6170692e69636f6e6966792e64657369676e2f6c6f676f733a6e782e737667
+                description "Interactive map of the codebase showing dependencies and task pipelines"
+                link: https://graph.infernet.work
+                style {
+                    color: cyan-700
+                    shape: browser
+                }
+            }
+
+        }
+
+        external-providers.software-development.netlify -> platform {
+            title: "provides continous deployment hosting for"
+        }
+
+        external-providers.software-development.netlify -> backend {
+            title: "provides serverless edge function hosting for"
+            description: "Next.js and React Router 7 are full-stack frameworks
+            that contain their own server. When an app built using these frameworks is deployed,
+            the server lives on the deployment provider's machine while the front-end bundle is shipped to the client.
+            
+            When the client makes a fetch request to the server, only the specific function responsible for serving the request is run. This is referred to as a serverless model.
+
+            Ideally this server lives in a data center as close to the client as possible, referred to as the 'Edge'.
+            "
+        }
+
+        container backend {
+            title: "Back-End"
+                technology: "PostgreSQL, Influxdb"
+            icon: https://www.svgrepo.com/show/484343/server-like.svg
+            description: "Database, API Layer, and State Engine. ⚙"
+            style {
+                color: red
+                shape: queue
+            }
+            
+
+            container databases {
+            title: "📦️ Databases"
+            style {
+                color: red
+                shape: storage
+            }
+            
+            component database-time-series {
+                title: "InfluxDB"
+                icon: tech:influxdb
+                link: https://www.influxdata.com
+                description: "Run locally via Nix"
+                style {
+                    color: fuchsia-800
+                    shape: storage
+                }
+            }
+
+            component database-relational {
+                title: "PostgreSQL"
+                icon: tech:postgresql
+                link: https://www.postgresql.org
+                description: "Run locally via Nix, hosted for production on Supabase"
+                style {
+                    color: red
+                    shape: storage
+                }
+            }
+
+            }
+            
+            container api {
+            title: "🔌 API Layer"
+            style {
+                color: red
+                shape: queue
+            }
+            
+            component rest {
+                title: "REST"
+                icon: tech:swagger
+                link : https://en.wikipedia.org/wiki/REST
+                description: "Represantional State Transfer"
+                style {
+                    color: red
+                    shape: queue
+                }
+            }
+
+            // component graphql {
+            //     title: "GraphQL"
+            //     icon: tech:graphql
+            //     link : https://graphql.org
+            //     style {
+            //         color: red
+            //         shape: queue
+            //     }
+            // }
+            
+            component mqtt {
+                title: "MQTT"
+                icon: https://avatars.githubusercontent.com/u/1544528?s=200&v=4.svg
+                link : https://mqtt.org
+                description: "Message Queuing Telemetry Transport"
+                style {
+                    color: red
+                    shape: queue
+                }
+            }
+
+            }
+
+            
+        }
+
+        
+
+        // component content-management-system {
+        //     title: "Content Management
+        //     System"
+        //     icon: https://avatars.githubusercontent.com/u/62968818?s=48&v=4
+        //     technology: "TypeScript, Payload CMS, Next.js"
+        //     link: https://axiom.cuhacking.ca
+        //     style {
+        //         color: zinc-900
+        //         shape: browser
+        //     }
+
+        //     content-management-system -> backend {
+        //         title: "admin dashboard that provides a look into"
+        //     }
+        // }
+
+        // platform -> nx{
+        //     style{
+        //         line: solid
+        //         color: amber
+        //         head: diamond
+        //         tail: crow
+        //     }
+        // }
+        // platform -> netlify
+        // platform -> chromatic
+        // platform -> pulumi
+        // platform -> squarespace
+        // platform -> google
+        // platform -> notion
+        // docs-site -> backend "fetches via HTTPS"
+
+        
+        
+        /*
+        external-providers.software-development.supabase -> backend {
+            title: "hosts database + data access serverless function APIs for"
+            description: "Similar to how front-ends are hosted on Netlify, back-ends are hosted on Supabase. The front-ends don't make calls to the database directly, but rather to the server that lives on Netlify.
+            
+            The server uses APIs that live exclusively in the back-end to fetch data from the database. These serverless function APIs are not hosted on Netlify, but on Supabse.
+            "
+        */
+        }
+
+    
+
+    /*
+    external-providers.software-development.github -> platform {
+        title: "stores all source code for"
+        description: "Where our repository lives."
+        link: https://github.com/cuhacking/2025
+    }
+
+    external-providers.software-development.squarespace -> platform {
+        title: "provides 'cuhacking.ca' domain for"
+    }
+    */
+}
