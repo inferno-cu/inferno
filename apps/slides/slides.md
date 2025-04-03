@@ -1,7 +1,10 @@
 ---
-author: Mumtahin Farabi
+theme: seriph
+author: Muhammad Maisam
+
+background: https://taskandpurpose.com/wp-content/uploads/2020/11/19975105-1.jpg?w=600
 title: "Inferno"
-titleTemplate: '%s - Inferno'
+titleTemplate: '%s - Slides'
 info: |
   ## Inferno Slide Deck
   Presentation slides for Inferno.
@@ -17,7 +20,7 @@ mdc: true
 
 <h1 class="text-amber-500">Inferno</h1>
 
-Progress Report
+Inhale Speed, Exhale Power
 
 <!-- Present your understanding of the requirements (10 minutes) -->
 <!-- Present chosen architectural design (15 minutes) -->
