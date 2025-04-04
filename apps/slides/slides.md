@@ -2,7 +2,7 @@
 ---
 author: Mumtahin Farabi
 title: "Inferno"
-titleTemplate: '%s - Inferno'
+titleTemplate: '%s - Slides'
 layout: image
 image:  /Inferno-slide-background.png
 info: |
@@ -141,7 +141,7 @@ transition: fade
   <!-- 🔥 Maisam -->
   <div class="flex flex-col items-center float-fire animate-fade-up animate-delay-500 card-hover-5">
     <a href="https://www.linkedin.com/in/muhammadmaisam01/" target="_blank">
-      <img src="https://media.licdn.com/dms/image/v2/D5603AQE-DYlrUhep3w/profile-displayphoto-shrink_800_800/B56ZWwd0.hGUAc-/0/1742422365225?e=1749081600&v=beta&t=37JH_U8kwnaOpe-o7Hp0n5r8wmJ4fuANz9eY7GQFbTA"
+      <img src="https://media.licdn.com/dms/image/v2/D5603AQHcG7pwk3FDuw/profile-displayphoto-shrink_400_400/B56ZYBQkhTGoAs-/0/1743777843884?e=1749081600&v=beta&t=4HP2OqaNqqGfyQoJOh-YAlgAc7TVI-CX-nQhI7W7oO0"
         class="w-32 h-32 rounded-full ring-4 ring-yellow-300 glow-ring transition duration-300" />
     </a>
     <div class="mt-3 text-xl font-semibold text-yellow-200">Maisam</div>
