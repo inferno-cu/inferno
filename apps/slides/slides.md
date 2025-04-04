@@ -57,7 +57,7 @@ mdc: true
       <span>Learn More</span>
     </a>
   </div>
-</div>
+
 </div>
 
 <!-- Slide 2 -->
