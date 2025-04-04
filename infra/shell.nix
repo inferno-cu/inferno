@@ -11,13 +11,14 @@ in pkgs.mkShell {
   buildInputs = [
     pkgs.zellij
     pkgs.neovim
+    pkgs.helix
     pkgs.nerd-fonts.jetbrains-mono
     pkgs.ascii-image-converter
-    pkgs.postgresql
-    pkgs.lazysql
+    # pkgs.postgresql
+    # pkgs.lazysql
     pkgs.lazygit
     pkgs.btop
-    pkgs.atac
+    # pkgs.atac
     pkgs.yazi
     pkgs.bat
     pkgs.browsh
@@ -25,11 +26,8 @@ in pkgs.mkShell {
     pkgs.zsh
     pkgs.lolcat
     pkgs.libcaca
-    pkgs.systemctl-tui
     pkgs.tgpt
-    pkgs.termshark
     pkgs.terminaltexteffects
-    # pkgs.netscanner
   ];
 
   shellHook = ''

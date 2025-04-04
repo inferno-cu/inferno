@@ -1,0 +1,44 @@
+layout {
+    default_tab_template {
+        pane size=2 borderless=true {
+            plugin location="zellij:tab-bar"
+        }
+        children
+        pane size=1 borderless=true {
+            plugin location="zellij:status-bar"
+        }
+    }
+     tab name="🧮 Network" hide_floating_panes=true {
+        pane split_direction="vertical" {
+        pane command="netscanner" name="📶 Netscanner" {
+        }
+        pane command="termshark" name="🦈 Termshark" {
+            args "-i" "wlp5s0"
+        }
+        }
+    }
+     tab name="💻 Systemctl" hide_floating_panes=true {
+        pane split_direction="vertical" {
+        pane command="systemctl-tui" name="systemctl" {
+        }
+        pane command="kmon" name="🍿 Kernel Monitor" {
+        }
+        }
+    }
+     tab name="💻 Other" hide_floating_panes=true {
+        pane split_direction="vertical" {
+        pane command="lazyjournal" name="Lazyjournal" {
+        }
+        pane command="ugm" name="ugm" {
+        }
+        }
+    }
+     tab name="💻 Other" hide_floating_panes=true {
+        pane split_direction="vertical" {
+        pane command="lazydocker" name="Lazydocker" {
+        }
+        pane command="ugm" name="ugm" {
+        }
+        }
+    }
+}
