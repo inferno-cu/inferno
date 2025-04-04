@@ -9,6 +9,7 @@ test-results
 /node_modules
 apps/docs/node_modules
 apps/slides/node_modules
+apps/admin/node_modules
 /.pnp
 .pnp.js
 
