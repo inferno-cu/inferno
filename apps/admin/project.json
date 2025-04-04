@@ -1,0 +1,16 @@
+{
+    "name": "admin",
+    "$schema": "../../node_modules/nx/schemas/project-schema.json",
+    "sourceRoot": "apps/admin",
+    "projectType": "application",
+    "tags": [],
+    "// targets": "to see all targets run: nx show project arch --web",
+    "targets": {
+      "dev": {
+        "command": "REACT_APP_API=mock yarn run start",
+        "options": {
+          "cwd": "apps/admin"
+        }
+      }
+    }
+  }

@@ -1,0 +1,142 @@
+{
+  "name": "supernetworks-SPR-ui",
+  "version": "0.3.3",
+  "description": "Supernetworks Secure Programmable Router",
+  "main": "index.js",
+  "private": true,
+  "license": "MIT",
+  "scripts": {
+    "analyze": "source-map-explorer 'build/static/js/*.js'",
+    "dev": "REACT_APP_API=http://192.168.2.1 GENERATE_SOURCEMAP=false react-scripts start",
+    "start": "GENERATE_SOURCEMAP=false react-scripts start",
+    "setup:ios": "pod-install ios && ./ios/update-version.sh",
+    "setup:version": "npm version $(git describe --tags)",
+    "android": "react-native run-android",
+    "ios": "react-native run-ios",
+    "macos": "react-native run-macos",
+    "native-start": "react-native start",
+    "build": "react-scripts build",
+    "test": "jest --forceExit",
+    "lint": "npx run prettier --write src",
+    "eject": "react-scripts eject",
+    "install:clean": "rm -rf node_modules/ && rm -rf package-lock.json && npm install && npm start"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/spr-networks/super.git"
+  },
+  "keywords": [
+    "react",
+    "admin"
+  ],
+  "author": "SPR (https://www.supernetworks.org/)",
+  "bugs": {
+    "url": "https://github.com/spr-networks/super/issues"
+  },
+  "homepage": "https://www.supernetworks.org/",
+  "resolutions": {
+    "@gluestack-ui/**/@expo/html-elements": "0.5.1",
+    "prismjs": "1.29.0"
+  },
+  "dependencies": {
+    "@babel/preset-react": "^7.18.6",
+    "@gluestack-style/react": "^1.0.45",
+    "@gluestack-ui/config": "^1.1.2",
+    "@gluestack-ui/themed": "^1.1.3",
+    "@react-aria/ssr": "^3.3.0",
+    "@react-native-async-storage/async-storage": "^1.17.7",
+    "@react-native-clipboard/clipboard": "^1.10.0",
+    "@react-native-community/push-notification-ios": "^1.10.1",
+    "@testing-library/jest-dom": "^6.1.4",
+    "@testing-library/react": "^14.0.0",
+    "chart.js": "^3.7.1",
+    "chartjs-adapter-moment": "^1.0.0",
+    "chroma-js": "^2.4.2",
+    "ip-address": "^9.0.5",
+    "jest": "^29.7.0",
+    "jsonpath": "^1.1.1",
+    "lucide-react-native": "^0.441.0",
+    "metro-react-native-babel-preset": "^0.77.0",
+    "miragejs": "^0.1.43",
+    "moment": "^2.29.4",
+    "prism-react-renderer": "^2.3.0",
+    "prop-types": "^15.7.2",
+    "react": "^18.2.0",
+    "react-chartjs-2": "^4.0.1",
+    "react-dom": "^18.2.0",
+    "react-hotkeys": "^2.0.0-pre9",
+    "react-native": "^0.72.4",
+    "react-native-chart-kit": "^6.12.0",
+    "react-native-device-info": "^10.13.1",
+    "react-native-macos": "^0.72.3",
+    "react-native-pager-view": "^6.2.2",
+    "react-native-rsa-native": "^2.0.5",
+    "react-native-safe-area-context": "^4.2.5",
+    "react-native-svg": "13.4.0",
+    "react-native-swipe-list-view": "^3.2.9",
+    "react-native-tab-view": "^3.1.1",
+    "react-native-web": "^0.19.9",
+    "react-qr-code": "^2.0.5",
+    "react-router-dom": "^6.3.0",
+    "react-router-native": "^6.3.0",
+    "react-scripts": "^5.0.1",
+    "source-map-explorer": "^2.5.2",
+    "timeago.js": "^4.0.2",
+    "url-loader": "^4.1.1"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.21.4",
+    "@babel/plugin-proposal-private-property-in-object": "^7.21.11",
+    "@babel/preset-env": "^7.21.4",
+    "@testing-library/jest-native": "^5.4.3",
+    "@testing-library/react-native": "^12.3.0",
+    "babel-jest": "^29.7.0",
+    "babel-loader": "^9.1.3",
+    "babel-plugin-react-native-web": "^0.19.9",
+    "css-loader": "^6.7.1",
+    "html-webpack-plugin": "^5.5.0",
+    "pod-install": "^0.1.38",
+    "react-test-renderer": "^18.2.0",
+    "serve": "^14.2.1",
+    "style-loader": "^3.3.1",
+    "webpack": "^5.89.0",
+    "webpack-cli": "^5.1.4",
+    "webpack-dev-server": "^4.15.1",
+    "xmlhttprequest": "^1.8.0"
+  },
+  "optionalDependencies": {
+    "@babel/plugin-syntax-flow": "^7.21.4",
+    "@babel/plugin-transform-react-jsx": "^7.21.0",
+    "@types/react": "^18.2.31",
+    "@types/react-native": ">=0.72",
+    "typescript": "^4.6.4"
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  },
+  "jest": {
+    "preset": "react-native",
+    "moduleDirectories": [
+      "src",
+      "node_modules"
+    ],
+    "setupFilesAfterEnv": [
+      "./src/setupTests.js"
+    ],
+    "transformIgnorePatterns": [
+      "/node_modules/(?!(@react-native|react-native|react-router-native|@react-native-community/push-notification-ios|@gluestack-ui|@expo|@legendapp)/).*/"
+    ],
+    "globals": {
+      "__DEV__": true
+    }
+  }
+}

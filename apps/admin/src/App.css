@@ -1,0 +1,72 @@
+
+/* mini icons in sidebar */
+
+/* submenu icons */
+li ul li .sidebar-mini-icon > .fa {
+  margin-left: 5px;
+}
+
+/* TODO smtg like this
+.sidebar-mini .sidebar-normal { text-align: center }
+*/
+
+.card-stats {
+	width: 100%;
+}
+
+.card-stats .icon-big {
+	font-size: 5.0em;
+	margin-top: -20px;
+	min-height: 64px;
+}
+
+.react-tagsinput .react-tagsinput-tag {
+	transition: all 300ms ease 0s;
+	transition: none !important;
+	border-color: #66615B;
+	background-color: #66615B;
+}
+
+.nc-wireguard {
+	background-image: url(assets/img/icon-wg.svg);
+	background-position: center center;
+	background-repeat: no-repeat;
+	opacity: 0.8;
+}
+.nc-wireguard:before {
+	content: '\ffff';
+	font-size: 1.2rem;
+}
+
+/* only display icon in mini-mode -- somewhat buggy */
+/*
+.sidebar-mini .sidebar .sidebar-normal {
+	line-height: 0px;
+	color: transparent;
+}
+
+.sidebar-mini .sidebar:hover .sidebar-normal {
+	line-height: 30px;
+	color: inherit;
+}
+*/
+
+.modal label,
+.modal .form-group label {
+	font-size: .8571em;
+	margin-bottom: 5px;
+	color: #9a9a9a;
+}
+
+/* badge fix */
+.badge.badge-secondary {
+	color: #fff;
+	background-color: #6c757d;
+}
+
+@media (min-width: 576px) {
+/* only align text right if large enough device */
+.sm-text-right {
+	text-align: right;
+}
+}
