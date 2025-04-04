@@ -11,6 +11,12 @@
         "options": {
           "cwd": "apps/arch"
         }
+      },
+      "build": {
+        "command": "likec4 build",
+        "options": {
+          "cwd": "apps/arch"
+        }
       }
     }
   }
