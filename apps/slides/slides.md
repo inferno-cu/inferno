@@ -2,7 +2,7 @@
 ---
 author: Mumtahin Farabi
 title: "Inferno"
-titleTemplate: '%s - Slides'
+titleTemplate: '%s - Inferno'
 layout: image
 image:  /Inferno-slide-background.png
 info: |
@@ -57,7 +57,7 @@ mdc: true
       <span>Learn More</span>
     </a>
   </div>
-
+</div>
 </div>
 
 <!-- Slide 2 -->
