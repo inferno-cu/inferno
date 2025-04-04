@@ -3,6 +3,8 @@
 author: Mumtahin Farabi
 title: "Inferno"
 titleTemplate: '%s - Inferno'
+layout: image
+image:  /Inferno-slide-background.png
 info: |
   ## Inferno Slide Deck
   Presentation slides for Inferno.
@@ -15,14 +17,14 @@ drawings:
 transition: slide-left
 mdc: true
 ---
-
+<div class="bg-stone-900 bg-opacity-80 rounded-xl px-1 py-10">
 <div class="relative h-full flex flex-col items-center justify-center space-y-5">
 
   <!-- 🔥 Logo -->
   <img 
-    src="/satelite.png" 
+    src="/inferno_logo.png" 
     alt="Inferno Logo" 
-    class="w-24 h-24 animate-fade-down animate-delay-100 drop-shadow-[0_0_20px_#f59e0b]" 
+    class="w-50 h-50 animate-fade-down animate-delay-100 drop-shadow-[0_0_20px_#f59e0b]" 
   />
 
   <!-- 🔥 Title -->
@@ -55,7 +57,7 @@ mdc: true
       <span>Learn More</span>
     </a>
   </div>
-
+</div>
 </div>
 
 <!-- Slide 2 -->
