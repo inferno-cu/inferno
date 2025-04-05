@@ -64,7 +64,7 @@ const IntroWidget = ({
               color="$muted800"
               sx={{ _dark: { color: '$muted400' } }}
             >
-              Welcome to SPR!
+              Welcome to the Infernet!
             </Text>
             <Text
               size="sm"
@@ -73,7 +73,7 @@ const IntroWidget = ({
               sx={{ _dark: { color: '$muted400' } }}
               textAlign="center"
             >
-              Setup what services and ports to allow, or add a new device
+              
             </Text>
           </VStack>
           <VStack space="md" sx={{ '@md': { flexDirection: 'row', gap: 16 } }}>

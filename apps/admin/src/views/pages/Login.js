@@ -135,11 +135,11 @@ const Login = (props) => {
           w: '$1/4',
           mt: '15vh',
           alignSelf: 'center',
-          rounded: 40
+          rounded: 8
         }
       }}
 
-      bg={colorMode === 'light' ? 'white' : '#1c1917'}
+      bg={'#1c1917'}
       
     >
 
@@ -226,7 +226,7 @@ const Login = (props) => {
           ) : null}
         </FormControl>
         <Button
-          rounded="$full"
+          rounded="$8"
           colorScheme="orange"
           bg="#f97316"
           sx={{

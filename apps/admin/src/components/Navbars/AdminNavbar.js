@@ -150,7 +150,7 @@ const AdminNavbar = ({
             >
               <HStack>
                 <Text size="lg" bold>
-                  SPR
+                  Inferno
                 </Text>
                 {isMeshNode ? <Text size="lg">MESH</Text> : null}
               </HStack>

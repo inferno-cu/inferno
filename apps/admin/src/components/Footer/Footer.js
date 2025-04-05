@@ -1,6 +1,13 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import { HStack, Link, LinkText, Text, VStack, Box } from '@gluestack-ui/themed'
+import { HStack, Link, VStack, Text } from '@gluestack-ui/themed'
+import {
+  FaFileAlt,
+  FaProjectDiagram,
+  FaGithub
+} from 'react-icons/fa'
+import { MdSlideshow } from 'react-icons/md';
+
 
 function Footer(props) {
   const year = new Date().getFullYear()
@@ -19,36 +26,21 @@ function Footer(props) {
     }
   }
 
-  const regText = {
-    
-    fontWeight: '700',
-    size: 'sm',
+  const iconBaseStyle = {
+    fontSize: 58,
     color: '#f97316',
-    letterSpacing: 0.5,
-    textDecorationLine: 'none' 
-
+    transition: 'transform 0.2s ease-in-out'
   }
 
-  const pillBox = {
-    px: '$3',
-    py: '$1',
-    borderRadius: 999,
-    borderWidth: 1,
-    borderColor: '#f97316', // 🔶 Bright golden yellow border
-    backgroundColor: '#1c1917', // 🔥 Dark charcoal brown to contrast the gold
-    shadowColor: '#fde047',
-    shadowOffset: { width: 0, height: 0 },
-    shadowOpacity: 0.4,
-    shadowRadius: 4,
-    alignItems: 'center',
-    justifyContent: 'center'
+  const hoverStyle = {
+    transform: 'scale(1.2)'
   }
 
   return (
     <VStack
       w="100%"
       py="$4"
-      space="md"
+      space="lg"
       bg={{
         linearGradient: {
           colors: ['#0a0a0a', '#140000'],
@@ -62,27 +54,38 @@ function Footer(props) {
       justifyContent="center"
       {...props}
     >
-      <HStack space="lg" flexWrap="wrap" justifyContent="center">
-        <Link isExternal href="http://infernet.work">
-          <Box sx={pillBox}>
-            <LinkText sx={regText}>Infernet</LinkText>
-          </Box>
+      <HStack space="2xl" flexWrap="wrap" justifyContent="center">
+        <Link
+          isExternal
+          href="http://slides.infernet.work"
+          style={{ ...iconBaseStyle }}
+          _hover={{ style: hoverStyle }}
+        >
+          <MdSlideshow style={iconBaseStyle} />
         </Link>
-        <Link isExternal href="https://docs.infernet.work">
-          <Box sx={pillBox}>
-            <LinkText sx={regText}>Docs</LinkText>
-          </Box>
+        <Link
+          isExternal
+          href="https://docs.infernet.work"
+          style={{ ...iconBaseStyle }}
+          _hover={{ style: hoverStyle }}
+        >
+          <FaFileAlt style={iconBaseStyle} />
         </Link>
-        <Link isExternal href="https://arch.infernet.work">
-          <Box sx={pillBox}>
-            <LinkText sx={regText}>Architecture</LinkText>
-          </Box>
+        <Link
+          isExternal
+          href="https://arch.infernet.work"
+          style={{ ...iconBaseStyle }}
+          _hover={{ style: hoverStyle }}
+        >
+          <FaProjectDiagram style={iconBaseStyle} />
         </Link>
-        <Link isExternal href="https://github.com/inferno-cu">
-          <Box sx={{pillBox, flexDirection: 'row', alignItems: 'center', gap: 6 }}>
-            <img src='GitHub_Invertocat_Light.png' alt="github logo" style={{ width: 16, height: 16 }} />
-            <LinkText sx={regText}>GitHub</LinkText>
-          </Box>
+        <Link
+          isExternal
+          href="https://github.com/inferno-cu"
+          style={{ ...iconBaseStyle }}
+          _hover={{ style: hoverStyle }}
+        >
+          <FaGithub style={iconBaseStyle} />
         </Link>
       </HStack>
 

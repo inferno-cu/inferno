@@ -19,7 +19,7 @@ const AuthLayout = () => {
     >
       <View w="100vw" h="100vh" bg="$white" sx={{ '@md': { bg: '$black' } }}>
         <Image
-          source="/bg.jpg"
+          source="/inferno-bg.png"
           opacity={0.4}
           h="100vh"
           w="100vw"

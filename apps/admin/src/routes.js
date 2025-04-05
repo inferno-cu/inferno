@@ -145,7 +145,6 @@ const routes = [
         name: 'Firewall',
         icon: FlameIcon,
         component: Firewall,
-        hideSimple: true,
         layout: 'admin'
       },
       {
@@ -153,7 +152,6 @@ const routes = [
         name: 'Remote Management',
         icon: GlobeIcon,
         component: RemoteManagement,
-        hideSimple: true,
         layout: 'admin'
       },
       {
@@ -161,7 +159,6 @@ const routes = [
         name: 'Serial to IP',
         icon: ArrowRightLeft,
         component: SerialToIP,
-        hideSimple: true,
         layout: 'admin'
       },
       {
@@ -169,7 +166,6 @@ const routes = [
       name: 'SNMP',
       icon: ServerIcon,
       component: SNMP,
-      hideSimple: true,
       layout: 'admin'
       },
       {
@@ -177,7 +173,6 @@ const routes = [
         name: 'Voice Extensions',
         icon: ServerIcon,
         component: VoiceExtensions,
-        hideSimple: true,
         layout: 'admin'
         },
         {
@@ -193,7 +188,6 @@ const routes = [
             name: 'Plugins',
             icon: PlugIcon,
             component: Plugins,
-            hideSimple: true,
             layout: 'admin'
           },
     ]
@@ -214,7 +208,6 @@ const routes = [
         name: 'Diagnostics',
         icon: WrenchIcon,
         component: DiagnosticsDashboard,
-        hideSimple: true,
         layout: 'admin'
       },
       {
@@ -238,6 +231,7 @@ const routes = [
     name: 'Home',
     icon: HomeIcon,
     component: Home,
+    hideSimple: true,
     layout: 'admin'
   },
   {
@@ -245,6 +239,7 @@ const routes = [
     icon: LaptopIcon,
     path: 'devices',
     component: Devices,
+    hideSimple: true,
     layout: 'admin'
   },
   {
@@ -269,6 +264,7 @@ const routes = [
   {
     name: 'Calling',
     state: 'netCollapse',
+    hideSimple: true,
     views: [
       {
         path: 'make call',
@@ -289,6 +285,7 @@ const routes = [
   {
     name: 'Network',
     state: 'netCollapse',
+    hideSimple: true,
     views: [
       {
         path: 'internet data routing',
@@ -384,6 +381,7 @@ const routes = [
   {
     name: 'DNS',
     state: 'dnsCollapse',
+    hideSimple: true,
     views: [
       {
         path: 'dnsBlock',
@@ -429,6 +427,7 @@ const routes = [
     name: 'Traffic',
     icon: LineChartIcon,
     state: 'trafficCollapse',
+    hideSimple: true,
     views: [
       {
         path: 'traffic',
@@ -520,6 +519,7 @@ const routes = [
   {
     name: 'System',
     state: 'systemCollapse',
+    hideSimple: true,
     views: [
       {
         path: 'system information',
