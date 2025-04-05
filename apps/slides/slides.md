@@ -46,7 +46,7 @@ mdc: true
       class="flex items-center justify-center w-10 h-10 rounded-xl bg-amber-600 text-white text-sm font-semibold shadow-xl hover:shadow-2xl hover:bg-amber-500 transition-transform hover:scale-105 focus:outline-none"
     >
       <img 
-        src="/inferno_logo.png" 
+        src="https://static.thenounproject.com/png/4481649-200.png" 
         alt="Inferno App" 
         class="w-5 h-5"
       />
@@ -731,7 +731,7 @@ const team = [
   { name: 'Emmanuel Gravel', image: 'https://media.licdn.com/dms/image/v2/C4E03AQHzbptLKNEYRQ/profile-displayphoto-shrink_200_200/profile-displayphoto-shrink_200_200/0/1581536669024?e=1749081600&v=beta&t=j5pE0XknqXiyCzH8-FWyx4QrcZb-vkkN8xP3mrCVN2g' },
   { name: 'Jan Lotz', image: 'https://media.licdn.com/dms/image/v2/C4D03AQEMeX9FxYNlRw/profile-displayphoto-shrink_200_200/profile-displayphoto-shrink_200_200/0/1517231375264?e=1749081600&v=beta&t=cGWM2cWYZSMTeEfU8ea1Hws8MJcw12QrknTKFCJuWBk' },
   { name: 'Gilles Bessens', image: 'https://media.licdn.com/dms/image/v2/C4E03AQE6CGOQHxjpfg/profile-displayphoto-shrink_200_200/profile-displayphoto-shrink_200_200/0/1580310827965?e=1749081600&v=beta&t=j1VugXDrHhrC-rLf_TR5fgmXZYfQ4Rl78DKLT-u8Njs' },
-  { name: 'Alain Abi-Akl', image: 'https://media.licdn.com/dms/image/v2/D4E03AQHUaVJ9wWVobA/profile-displayphoto-shrink_200_200/profile-displayphoto-shrink_200_200/0/1676921819726?e=1749081600&v=beta&t=f5GY9Fa5xtphDNNvIJIkwv8DaselYxIYj0B3oQUDpFs' },
+  { name: 'Malachi Nordine', image: 'https://media.licdn.com/dms/image/v2/C5603AQHO3QFiAPaeJQ/profile-displayphoto-shrink_400_400/profile-displayphoto-shrink_400_400/0/1628013717780?e=1749081600&v=beta&t=O6WiSgZVXuM4sovwqMGr-e7GgjVHNq0J1-E6c4--C0M' },
   { name: 'Lindi Sale', image: 'https://media.licdn.com/dms/image/v2/C5603AQFEDO1P1ckmcw/profile-displayphoto-shrink_200_200/profile-displayphoto-shrink_200_200/0/1517541625092?e=1749081600&v=beta&t=pBYoihJNBarM_79bflYIpi__8NEjCHi30qPq9vBxRoQ' },
 ]
 </script>
@@ -768,14 +768,6 @@ layout: two-cols
 <div class="flex flex-col items-center justify-center text-center">
 
 [![Iridium Modules](/iridium_modules.png)](https://www.iridium.com/products/iridium-certus-9770/)
-
-::right::
-
-
-
-                                                                                                                                                                                                                                                                                                                                                       .
-
-[![Iridium Products](/iridium_products.png)](https://www.iridium.com/products/iridium-certus-9770/)
 
 </div>
 ---
