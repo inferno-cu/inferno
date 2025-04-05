@@ -133,13 +133,18 @@ const Login = (props) => {
         '@md': {
           h: 'auto',
           w: '$1/4',
-          mt: '8vh',
+          mt: '15vh',
           alignSelf: 'center',
-          rounded: 10
+          rounded: 40
         }
       }}
-      bg={colorMode === 'light' ? 'white' : '$blueGray900'}
+
+      bg={colorMode === 'light' ? 'white' : '#1c1917'}
+      
     >
+
+      <img src='/inferno-logo-word.png' style={{ width: '200px', height: 'auto', margin:'0 auto' }} />
+
       <VStack space="lg" flex={2}>
         <Heading
           alignSelf="center"
@@ -152,7 +157,6 @@ const Login = (props) => {
             }
           }}
         >
-          Login
         </Heading>
         <FormControl
           isInvalid={'hostname' in errors}
@@ -222,9 +226,9 @@ const Login = (props) => {
           ) : null}
         </FormControl>
         <Button
-          rounded="full"
-          colorScheme="yellow"
-          bg="#fbc658"
+          rounded="$full"
+          colorScheme="orange"
+          bg="#f97316"
           sx={{
             ':hover': {
               bg: '#fab526'
