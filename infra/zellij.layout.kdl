@@ -37,7 +37,7 @@ layout {
         }
         }
     }
-    tab name="🔥 Status" {
+    tab name="🔥 Status" hide_floating_panes=true {
         pane split_direction="vertical" {
         pane split_direction="horizontal" {
         pane command="lazygit" name="🍒 Lazygit" {
@@ -45,11 +45,6 @@ layout {
         pane command="yazi" name="🦆 Yazi" cwd="../" {
         }
         }
-        pane command="hx" name="🧬 Helix" cwd="../" {
-        args "LICENSE"
-        }
-        }
-      floating_panes {
         pane command="tgpt" name="🧠 TGPT" {
         args "-m"
         }
