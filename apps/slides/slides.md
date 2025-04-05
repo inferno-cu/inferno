@@ -518,7 +518,7 @@ transition: fade
     <thead>
       <tr>
         <th class="text-left">Features</th>
-        <th><img src="/blue-sky.png" alt="Skylink" class="w-12 h-10 mx-auto" /></th>
+        <th><img src="/blue-sky.png" alt="Skylink" class="w-12 h-5 mx-auto" /></th>
         <th><img src="/skytrac.png" alt="WiFi" class="w-8 h-8 mx-auto" /></th>
         <th><img src="/inferno_logo.png" alt="Dashboard" class="w-8 h-8 mx-auto" /></th>
       </tr>
@@ -588,6 +588,58 @@ transition: fade
   </table>
 </div>
 
+layout: center
+class: text-center
+---
+
+# 🔥 Thank You to SKYTRAC!
+
+<div class="text-xl font-medium text-orange-300 tracking-wide animate-pulse mt-2">
+  You lit the fire that made this project possible.
+</div>
+
+
+<div class="grid grid-cols-2 sm:grid-cols-3 gap-6 mt-4 justify-center items-center">
+
+  <div 
+    v-for="(member, index) in team" 
+    :key="index" 
+    class="bg-gradient-to-br from-amber-500/20 to-orange-800/20 backdrop-blur-sm p-3 rounded-3xl border border-orange-400/30 shadow-[0_4px_20px_rgba(255,125,0,0.4)] hover:scale-105 transition-transform duration-300 animate-fade-up hover:shadow-[0_0_30px_rgba(255,140,0,0.7)]"
+  >
+    <img 
+      :src="member.image" 
+      alt="Team Member" 
+      class="w-28 h-28 rounded-full object-cover border-4 border-amber-500 shadow-lg"
+    />
+    <p class="mt-4 text-lg font-bold text-orange-200 tracking-wide drop-shadow-md">
+      {{ member.name }}
+    </p>
+  </div>
+
+</div>
+
+<style>
+.slidev-layout {
+  background: radial-gradient(circle at top left, #1a0e05, #0b0200);
+  animation: bg-glow 10s ease-in-out infinite alternate;
+}
+
+@keyframes bg-glow {
+  0% { background-color: #1a0e05; }
+  100% { background-color: #2a1000; }
+}
+</style>
+
+<script setup>
+const team = [
+  { name: 'Joe Lee', image: 'https://media.licdn.com/dms/image/v2/C5603AQGbu5k13kU0sg/profile-displayphoto-shrink_200_200/profile-displayphoto-shrink_200_200/0/1659190990679?e=1749081600&v=beta&t=zEXsfFVwkhDZxRmPFtgYAxO2NyrXE7AsOKzS8Y5N4CI' },
+  { name: 'Emmanuel Gravel', image: 'https://media.licdn.com/dms/image/v2/C4E03AQHzbptLKNEYRQ/profile-displayphoto-shrink_200_200/profile-displayphoto-shrink_200_200/0/1581536669024?e=1749081600&v=beta&t=j5pE0XknqXiyCzH8-FWyx4QrcZb-vkkN8xP3mrCVN2g' },
+  { name: 'Jan Lotz', image: 'https://media.licdn.com/dms/image/v2/C4D03AQEMeX9FxYNlRw/profile-displayphoto-shrink_200_200/profile-displayphoto-shrink_200_200/0/1517231375264?e=1749081600&v=beta&t=cGWM2cWYZSMTeEfU8ea1Hws8MJcw12QrknTKFCJuWBk' },
+  { name: 'Gilles Bessens', image: 'https://media.licdn.com/dms/image/v2/C4E03AQE6CGOQHxjpfg/profile-displayphoto-shrink_200_200/profile-displayphoto-shrink_200_200/0/1580310827965?e=1749081600&v=beta&t=j1VugXDrHhrC-rLf_TR5fgmXZYfQ4Rl78DKLT-u8Njs' },
+  { name: 'Alain Abi-Akl', image: 'https://media.licdn.com/dms/image/v2/D4E03AQHUaVJ9wWVobA/profile-displayphoto-shrink_200_200/profile-displayphoto-shrink_200_200/0/1676921819726?e=1749081600&v=beta&t=f5GY9Fa5xtphDNNvIJIkwv8DaselYxIYj0B3oQUDpFs' },
+  { name: 'Lindi Sale', image: 'https://media.licdn.com/dms/image/v2/C5603AQFEDO1P1ckmcw/profile-displayphoto-shrink_200_200/profile-displayphoto-shrink_200_200/0/1517541625092?e=1749081600&v=beta&t=pBYoihJNBarM_79bflYIpi__8NEjCHi30qPq9vBxRoQ' },
+]
+</script>
 ---
 transition: fade-out
 ---
