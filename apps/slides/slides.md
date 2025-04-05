@@ -55,13 +55,12 @@ mdc: true
       href="https://docs.infernet.work" 
       target="_blank" 
       class="flex items-center justify-center w-10 h-10 rounded-xl bg-amber-600 text-white text-sm font-semibold shadow-xl hover:shadow-2xl hover:bg-amber-500 transition-transform hover:scale-105 focus:outline-none"
-    >
+    >    
     <img 
         src="https://em-content.zobj.net/source/twitter/31/open-book_1f4d6.png" 
         alt="Documentation" 
         class="w-5 h-5"
       />
-    <!-- <twemoji-open-book /> -->
     </a>
     <a 
       href="https://arch.infernet.work" 
@@ -84,7 +83,6 @@ mdc: true
         alt="Git Hub" 
         class="w-5 h-5"
       />
-      <!-- <logos-github-icon /> -->
     </a>
   </div>
 </div>
