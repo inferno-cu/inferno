@@ -23,6 +23,7 @@ const defaultImageHostnames = [
   '12factor.net',
   'uo.zone',
   'serenity-js.org',
+  'huly.io',
 ]
 
 const withMDX = createMDX();

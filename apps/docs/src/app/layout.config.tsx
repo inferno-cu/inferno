@@ -11,7 +11,7 @@ export const baseOptions: BaseLayoutProps = {
   nav: {
     title: (
       <>
-        <Image src="/inferno_symbol_3.png" alt="Inferno Logo" height={48} width={48} />
+        <Image src="/Inferno Final.png" alt="Inferno Logo" height={48} width={48} />
         <span className="text-lg font-bold text-red-500">
           Inferno
           {' '}
@@ -42,7 +42,7 @@ export const baseOptions: BaseLayoutProps = {
       icon: <SquareKanban />,
     },
   ],
-  githubUrl: 'https://github.com/mira-amm/mira-amm-web',
+  githubUrl: 'https://github.com/inferno-cu/inferno',
 };
 
 export const homeOptions: HomeLayoutProps = { ...baseOptions }
