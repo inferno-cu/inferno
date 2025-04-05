@@ -186,6 +186,8 @@ transition: slide-left
   <img src="/dlink_top_with_heat_sync.jpg" alt="D-Link Top w/ Heat Sync" class="inferno-img w-32" />
   <img src="/dlink_top_without_heat_sync.jpg" alt="D-Link Top w/o Heat Sync" class="inferno-img w-32" />
 </div>
+
+<!---
 <style>
 .inferno-img {
   border-radius: 1rem;
@@ -213,7 +215,7 @@ transition: slide-left
   text-shadow: 0 0 20px #f59e0b;
 }
 </style>
-
+-->
 ---
 transition: slide-left
 ---
@@ -632,7 +634,7 @@ transition: fade
 </h1>
 
 <ul class="text-lg text-zinc-200 space-y-3 max-w-3xl mx-auto animate-fade-up">
-  <li>✈️ Hully — for project management</li>
+  <li>✈️ Huly — for project management</li>
   <li>🎨 Penpot — collaborative design & UI prototyping</li>
   <li>🔥 Slidev — the cool engine behind this slide deck</li>
   <li>📚 Fumadocs — documentation from markdown</li>
@@ -737,24 +739,45 @@ const team = [
 transition: fade-out
 ---
 
-# Market Research
 
-## Teltonika Topology
+<h1 class="text-5xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-amber-400 via-orange-500 to-red-600 mb-8 tracking-widest drop-shadow-[0_0_20px_#f59e0b]">
+  🔥 Market Research
+</h1>
 
-<a href="https://teltonika-networks.com/use-cases/industrial-automation/cellular-router-for-aerial-critical-infrastructure-inspection" target="_blank" rel="noopener noreferrer">
-  <img src="/teltonika_topology.png" alt="Clickable Image" width="600">
-</a>
+<div class="flex flex-col items-center justify-center text-center">
+
+  <h2 class="text-2xl font-bold mb-4">Teltonika Topology</h2>
+
+  <a href="https://teltonika-networks.com/use-cases/industrial-automation/cellular-router-for-aerial-critical-infrastructure-inspection" target="_blank" rel="noopener noreferrer">
+    <img src="/teltonika_topology.png" alt="Clickable Image" width="500">
+  </a>
+</div>
+
 
 ---
 layout: two-cols
 ---
 
+
+
+
+<h1 class="text-5xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-amber-400 via-orange-500 to-red-600 mb-8 tracking-widest drop-shadow-[0_0_20px_#f59e0b]">
+  🔥 Market Research
+</h1>
+
+<div class="flex flex-col items-center justify-center text-center">
+
 [![Iridium Modules](/iridium_modules.png)](https://www.iridium.com/products/iridium-certus-9770/)
 
 ::right::
 
+
+
+                                                                                                                                                                                                                                                                                                                                                       .
+
 [![Iridium Products](/iridium_products.png)](https://www.iridium.com/products/iridium-certus-9770/)
 
+</div>
 ---
 layout: two-cols
 ---
