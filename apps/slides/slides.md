@@ -56,7 +56,7 @@ mdc: true
       target="_blank" 
       class="flex items-center space-x-2 px-5 py-2.5 rounded-xl bg-amber-600 text-white text-sm font-semibold shadow-xl hover:shadow-2xl hover:bg-amber-500 transition-transform hover:scale-105"
     >
-    <twemoji-open-book />
+    <!-- <twemoji-open-book /> -->
     </a>
     <a 
       href="https://arch.infernet.work" 
@@ -74,7 +74,7 @@ mdc: true
       target="_blank" 
       class="flex items-center space-x-2 px-5 py-2.5 rounded-xl bg-amber-600 text-white text-sm font-semibold shadow-xl hover:shadow-2xl hover:bg-amber-500 transition-transform hover:scale-105"
     >
-    <logos-github-icon />
+    <!-- <logos-github-icon /> -->
     </a>
   </div>
 </div>
@@ -113,7 +113,7 @@ transition: slide-left
   👋 Meet the Team
 </h1>
 
-<div class="relative flex flex-wrap justify-center items-center gap-14 max-w-[90rem] mx-auto">
+<div class="relative flex flex-wrap justify-center items-center gap-18 max-w-[90rem] mx-auto">
 
   <div class="flex flex-col items-center float-fire animate-fade-up animate-delay-100 card-hover-1">
     <a href="https://www.linkedin.com/in/sanil-srivastava/" target="_blank">
@@ -160,17 +160,8 @@ transition: slide-left
     <small class="italic text-zinc-400">docs/research master</small>
   </div>
 
-  <div class="flex flex-col items-center float-fire animate-fade-up animate-delay-600 card-hover-6">
-    <a href="#">
-      <img src="https://media.licdn.com/dms/image/v2/D5603AQE-DYlrUhep3w/profile-displayphoto-shrink_800_800/B56ZWwd0.hGUAc-/0/1742422365225?e=1749081600&v=beta&t=37JH_U8kwnaOpe-o7Hp0n5r8wmJ4fuANz9eY7GQFbTA"
-        class="w-32 h-32 rounded-full ring-4 ring-pink-300 glow-ring transition duration-300" />
-    </a>
-    <div class="mt-3 text-xl font-semibold text-pink-200">Luna</div>
-    <small class="italic text-zinc-400">Senior Nap Consultant</small>
-  </div>
-
-  <div class="absolute bottom-4 right-4 w-28 h-28 animate-fade-in animate-delay-[1100ms] opacity-90 hover:scale-105 transition">
-    <img src="/satelite.png" alt="Inferno Badge" class="w-full h-full object-contain drop-shadow-[0_0_20px_#f59e0b]" />
+  <div class="absolute bottom-4 right-4 w-58 h-38 animate-fade-in animate-delay-[1100ms] opacity-90 hover:scale-105 transition">
+    <img src="/carleton.png" alt="Inferno Badge" class="w-full h-full object-contain drop-shadow-[0_0_20px_#f59e0b]" />
   </div>
 </div>
 
@@ -178,15 +169,45 @@ transition: slide-left
 transition: slide-left
 ---
 
-# [D-Link AC1750](https://dlink.ca/products/dir-867)
+# <a href="https://dlink.ca/products/dir-867" target="_blank" rel="noopener noreferrer" class="inferno-title">D-Link AC1750</a>
 
-<div class="flex flex-wrap gap-2 mt-2">
-  <img src="/dlink_closed.jpg" class="w-32 h-auto"/>
-  <img src="/dlink_rear.jpg" class="w-32 h-auto"/>
-  <img src="/dlink_bottom.jpg" class="w-32 h-auto"/>
-  <img src="/dlink_top_with_heat_sync.jpg" class="w-32 h-auto"/>
-  <img src="/dlink_top_without_heat_sync.jpg" class="w-32 h-auto"/>
+<div class="flex flex-wrap justify-center gap-4 mt-4">
+  <img src="/dlink_closed.jpg" alt="D-Link Closed" class="inferno-img w-32" />
+  <img src="/dlink_rear.jpg" alt="D-Link Rear" class="inferno-img w-32" />
+  <img src="/dlink_bottom.jpg" alt="D-Link Bottom" class="inferno-img w-32" />
+  <img src="/dlink_top_with_heat_sync.jpg" alt="D-Link Top w/ Heat Sync" class="inferno-img w-32" />
+  <img src="/dlink_top_without_heat_sync.jpg" alt="D-Link Top w/o Heat Sync" class="inferno-img w-32" />
 </div>
+---
+
+<style>
+.inferno-img {
+  border-radius: 1rem;
+  box-shadow: 0 0 20px rgba(251, 191, 36, 0.5);
+  border: 2px solid rgba(251, 191, 36, 0.5);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
+}
+
+.inferno-img:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 35px rgba(251, 191, 36, 0.8);
+}
+
+.inferno-title {
+  font-size: 3rem;
+  font-weight: 900;
+  background: linear-gradient(to right, #fbbf24, #f97316, #dc2626);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  margin-bottom: 1.5rem;
+  text-align: center;
+  text-shadow: 0 0 20px #f59e0b;
+}
+</style>
+
 
 ---
 transition: slide-left
@@ -497,9 +518,9 @@ transition: fade
     <thead>
       <tr>
         <th class="text-left">Features</th>
-        <th><img src="/skylink.png" alt="Skylink" class="w-8 h-8 mx-auto" /></th>
-        <th><img src="/wifi.png" alt="WiFi" class="w-8 h-8 mx-auto" /></th>
-        <th><img src="/dashboard.png" alt="Dashboard" class="w-8 h-8 mx-auto" /></th>
+        <th><img src="/blue-sky.png" alt="Skylink" class="w-12 h-10 mx-auto" /></th>
+        <th><img src="/skytrac.png" alt="WiFi" class="w-8 h-8 mx-auto" /></th>
+        <th><img src="/inferno_logo.png" alt="Dashboard" class="w-8 h-8 mx-auto" /></th>
       </tr>
     </thead>
     <tbody>
@@ -701,3 +722,5 @@ layout: two-cols
 </a>
 
 ---
+
+
