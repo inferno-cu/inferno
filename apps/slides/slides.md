@@ -428,6 +428,44 @@ transition: fade-out
 
 <!-- Slide 9-->
 ---
+transition: fade-out
+---
+
+<style>
+.inferno-frame {
+  @apply w-full h-[22rem] max-w-5xl rounded-2xl shadow-2xl ring-4 ring-amber-500;
+  background-color: #0f0f0f;
+  animation: fadeIn 1s ease-out;
+}
+@keyframes fadeIn {
+  from { opacity: 0; transform: scale(0.95); }
+  to { opacity: 1; transform: scale(1); }
+}
+</style>
+
+<h1 class="text-5xl font-black text-center text-transparent bg-clip-text bg-gradient-to-r from-yellow-400 via-orange-500 to-red-600 animate-fade-up mb-8 drop-shadow-[0_0_30px_#f59e0b]">
+  🔥 What We Accomplished
+</h1>
+
+<div class="flex justify-center items-center w-full px-6">
+  <iframe
+    src="https://skytrac.infernet.work/"
+    class="inferno-frame"
+    frameborder="0"
+    allowfullscreen
+  ></iframe>
+</div>
+
+<!-- Optional button below -->
+<div class="mt-6 text-center">
+  <a href="https://slides.infernet.work" target="_blank"
+     class="inline-block px-6 py-2 bg-amber-600 hover:bg-amber-500 text-white font-bold rounded-xl transition shadow-lg">
+    🔗 Visit SKYTRAC SDL-350 Live
+  </a>
+</div>
+
+<!-- Slide 10-->
+---
 transition: fade
 ---
 
@@ -456,213 +494,140 @@ transition: fade
   ></iframe>
 </div>
 
-
+<!-- Slide 11-->
 ---
-layout: center
-transition: fade
+transition: slide-left
 ---
 
 <style>
-.pdf-frame {
-  width: 60vw; /* Full viewport width */
-  height: 60vh; /* 90% of viewport height for better readability */
-  border: none;
+@keyframes glowPulse {
+  0%, 100% {
+    box-shadow: 0 0 6px #f59e0b44, 0 0 15px #f59e0b33;
+  }
+  50% {
+    box-shadow: 0 0 14px #fbbf24aa, 0 0 30px #f59e0b88;
+  }
+}
+.inferno-table {
+  @apply w-full text-sm sm:text-base max-w-6xl mx-auto table-auto border-collapse rounded-xl overflow-hidden shadow-xl;
+  border: 1px solid #f59e0b33;
   background-color: #0f0f0f;
-  animation: fadeIn 1s ease-out;
+  animation: fadeInTable 0.8s ease-out;
 }
-@keyframes fadeIn {
-  from { opacity: 0; transform: scale(0.95); }
-  to { opacity: 1; transform: scale(1); }
+
+.inferno-table th, .inferno-table td {
+  @apply px-4 py-2 text-center text-zinc-200;
+  border-bottom: 1px solid #1e1e1e;
+}
+
+.inferno-table th {
+  @apply bg-zinc-800 text-sm;
+}
+
+.inferno-table td:first-child {
+  @apply text-left font-medium text-zinc-300;
+}
+
+.inferno-table tr:hover td {
+  @apply bg-zinc-900 transition;
+}
+
+.icon-check {
+  color: #22c55e;
+  font-size: 1.2rem;
+  text-shadow: 0 0 4px #22c55e88;
+}
+
+.icon-cross {
+  color: #ef4444;
+  font-size: 1.2rem;
+  text-shadow: 0 0 4px #ef444488;
+}
+
+@keyframes fadeInTable {
+  from { opacity: 0; transform: translateY(10px) scale(0.97); }
+  to { opacity: 1; transform: translateY(0) scale(1); }
 }
 </style>
 
-<h1 class="text-5xl font-black text-center text-transparent bg-clip-text bg-gradient-to-r from-yellow-400 via-orange-500 to-red-600 animate-fade-up mb-8 drop-shadow-[0_0_30px_#f59e0b]">
- Satellite Constellations - 2024 Survey, Trends and Economic Sustainability
-</h1>
+<h2 class="text-4xl font-black text-transparent bg-clip-text bg-gradient-to-r from-amber-400 via-orange-500 to-red-600 text-center mb-6 tracking-wide animate-fade-up drop-shadow-[0_0_20px_#f59e0b]">
+  ✅ Infernet Feature Matrix
+</h2>
 
-<div class="flex justify-center items-center w-full">
-  <iframe
-    src="https://www.newspace.im/assets/Constellations-2024_ErikKulu_IAC2024.pdf"
-    class="pdf-frame"
-    frameborder="0"
-    allowfullscreen
-  ></iframe>
+<div class="overflow-x-auto px-4">
+  <table class="inferno-table">
+    <thead>
+      <tr>
+        <th class="text-left">Features</th>
+        <th><img src="/skylink.png" alt="Skylink" class="w-8 h-8 mx-auto" /></th>
+        <th><img src="/wifi.png" alt="WiFi" class="w-8 h-8 mx-auto" /></th>
+        <th><img src="/dashboard.png" alt="Dashboard" class="w-8 h-8 mx-auto" /></th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>Telemetry Sync</td>
+        <td><span class="icon-check">✔</span></td>
+        <td><span class="icon-check">✔</span></td>
+        <td><span class="icon-check">✔</span></td>
+      </tr>
+      <tr>
+        <td>Offline Buffering</td>
+        <td><span class="icon-cross">✘</span></td>
+        <td><span class="icon-check">✔</span></td>
+        <td><span class="icon-check">✔</span></td>
+      </tr>
+      <tr>
+        <td>Live Charting</td>
+        <td><span class="icon-check">✔</span></td>
+        <td><span class="icon-cross">✘</span></td>
+        <td><span class="icon-check">✔</span></td>
+      </tr>
+      <tr>
+        <td>Dual Band Support</td>
+        <td><span class="icon-check">✔</span></td>
+        <td><span class="icon-check">✔</span></td>
+        <td><span class="icon-check">✔</span></td>
+      </tr>
+      <tr>
+        <td>Failover Auto-Switch</td>
+        <td><span class="icon-cross">✘</span></td>
+        <td><span class="icon-cross">✘</span></td>
+        <td><span class="icon-check">✔</span></td>
+      </tr>
+      <tr>
+        <td>Encrypted Logs</td>
+        <td><span class="icon-check">✔</span></td>
+        <td><span class="icon-check">✔</span></td>
+        <td><span class="icon-check">✔</span></td>
+      </tr>
+      <tr>
+        <td>Airborne Access</td>
+        <td><span class="icon-cross">✘</span></td>
+        <td><span class="icon-cross">✘</span></td>
+        <td><span class="icon-cross">✘</span></td>
+      </tr>
+      <tr>
+        <td>LAN Handshake</td>
+        <td><span class="icon-check">✔</span></td>
+        <td><span class="icon-check">✔</span></td>
+        <td><span class="icon-check">✔</span></td>
+      </tr>
+      <tr>
+        <td>Redundancy Alerts</td>
+        <td><span class="icon-check">✔</span></td>
+        <td><span class="icon-cross">✘</span></td>
+        <td><span class="icon-check">✔</span></td>
+      </tr>
+      <tr>
+        <td>Remote Config Push</td>
+        <td><span class="icon-cross">✘</span></td>
+        <td><span class="icon-check">✔</span></td>
+        <td><span class="icon-check">✔</span></td>
+      </tr>
+    </tbody>
+  </table>
 </div>
-
-<!-- Slide 1: Iridium Certus™ 9770 Overview -->
----
-layout: center
-transition: slide-left
----
-
-<style>
-.slide-title {
-  @apply text-5xl font-black text-center text-transparent bg-clip-text bg-gradient-to-r from-yellow-400 via-orange-500 to-red-600 animate-fade-up mb-8 drop-shadow-[0_0_30px_#f59e0b];
-}
-.product-image {
-  @apply w-80 h-auto rounded-xl shadow-xl;
-}
-.text-bullets {
-  @apply text-lg text-zinc-300 max-w-3xl;
-}
-.resource-link {
-  @apply text-amber-400 underline;
-}
-</style>
-
-<h1 class="slide-title">Iridium Certus™ 9770 Overview</h1>
-
-<div class="flex flex-col items-center space-y-6">
-  <img src="https://www.iridium.com/wp-content/uploads/2021/07/IMG_Product_Iridium-Certus-9770-3.jpg" alt="Iridium Certus™ 9770" class="product-image" />
-  <ul class="text-bullets list-disc list-inside">
-    <li>Operates with a constellation of 66 satellites at 780 km altitude (86.4° inclination).</li>
-    <li>Supports both L-band and Ka-band transmissions.</li>
-    <li>Enables satellite telephony and high-speed internet access globally.</li>
-  </ul>
-  <a href="https://www.iridium.com/#:~:text=Iridium%20is%20a%20global%20satellite" target="_blank" class="resource-link">Learn More about Iridium</a>
-</div>
-
----
-
-<!-- Slide 2: Market & Resource Insights -->
----
-layout: center
-transition: slide-left
----
-
-<style>
-.slide-title {
-  @apply text-5xl font-black text-center text-transparent bg-clip-text bg-gradient-to-r from-yellow-400 via-orange-500 to-red-600 animate-fade-up mb-8 drop-shadow-[0_0_30px_#f59e0b];
-}
-.text-content {
-  @apply text-lg text-zinc-300 text-center max-w-3xl;
-}
-.resource-link {
-  @apply text-amber-400 underline;
-}
-</style>
-
-<h1 class="slide-title">Market & Resource Insights</h1>
-
-<div class="flex flex-col items-center space-y-6">
-  <p class="text-content">
-    Skytrac provides in-depth analysis of Iridium Certus, emphasizing its robust performance and strategic market positioning in the satellite communication industry.
-  </p>
-  <a href="https://www.skytrac.ca/resources/magazine/what-is-iridium-certus/" target="_blank" class="resource-link">
-    Read the Skytrac Magazine Article
-  </a>
-</div>
-
----
-
-<!-- Slide 3: Competitor Analysis – Thuraya -->
----
-layout: center
-transition: slide-left
----
-
-<style>
-.slide-title {
-  @apply text-5xl font-black text-center text-transparent bg-clip-text bg-gradient-to-r from-yellow-400 via-orange-500 to-red-600 animate-fade-up mb-8 drop-shadow-[0_0_30px_#f59e0b];
-}
-.text-content {
-  @apply text-lg text-zinc-300 text-center max-w-3xl;
-}
-.resource-link {
-  @apply text-amber-400 underline;
-}
-</style>
-
-<h1 class="slide-title">Competitor Analysis: Thuraya</h1>
-
-<div class="flex flex-col items-center space-y-6">
-  <p class="text-content">
-    Thuraya’s L-band satellite network serves aviation, maritime, and land-based markets with specialized connectivity solutions, positioning itself as a strong competitor in certain regions.
-  </p>
-  <a href="https://www.thuraya.com/en/products-list" target="_blank" class="resource-link">
-    Explore Thuraya Products
-  </a>
-</div>
-
----
-
-<!-- Slide 4: Collaborators & Further Research -->
----
-layout: center
-transition: slide-left
----
-
-<style>
-.slide-title {
-  @apply text-5xl font-black text-center text-transparent bg-clip-text bg-gradient-to-r from-yellow-400 via-orange-500 to-red-600 animate-fade-up mb-8 drop-shadow-[0_0_30px_#f59e0b];
-}
-.text-content {
-  @apply text-lg text-zinc-300 text-center max-w-3xl;
-}
-.resource-link {
-  @apply text-amber-400 underline;
-}
-.pdf-frame {
-  width: 80vw;
-  height: 70vh;
-  border: none;
-  background-color: #0f0f0f;
-  animation: fadeIn 1s ease-out;
-}
-@keyframes fadeIn {
-  from { opacity: 0; transform: scale(0.95); }
-  to { opacity: 1; transform: scale(1); }
-}
-</style>
-
-<h1 class="slide-title">Collaborators & Further Research</h1>
-
-<div class="flex flex-col items-center space-y-6">
-  <p class="text-content">
-    Additional research covers collaborative initiatives in the satellite communications space, including Iridium’s partnership with Qualcomm for satellite-to-cell messaging, and comparisons with emerging networks like OneWeb.
-  </p>
-  <div class="flex flex-col items-center space-y-2">
-    <a href="https://www.bcsatellite.net/oneweb/" target="_blank" class="resource-link">
-      Learn More about OneWeb
-    </a>
-    <a href="https://www.satellitetoday.com/mobile-connectivity/2023/01/05/iridium-partners-with-qualcomm-for-chips-that-enable-satellite-to-cell-messaging/" target="_blank" class="resource-link">
-      Read about Iridium & Qualcomm Partnership
-    </a>
-  </div>
-  <p class="text-sm text-zinc-400 text-center">
-    For an in-depth technical overview, refer to the detailed research document below.
-  </p>
-  <div class="w-full flex justify-center">
-    <iframe src="https://www.newspace.im/assets/Constellations-2024_ErikKulu_IAC2024.pdf" class="pdf-frame" allowfullscreen></iframe>
-  </div>
-</div>
-
----
-
-<!-- References (Optional) -->
----
-layout: center
-transition: fade
----
-
-<style>
-.ref-title {
-  @apply text-4xl font-bold text-center text-amber-500 mb-6;
-}
-.ref-list {
-  @apply text-lg text-zinc-300 list-disc list-inside max-w-3xl;
-}
-</style>
-
-<h1 class="ref-title">References</h1>
-
-<ul class="ref-list">
-  <li><a href="https://www.iridium.com/#:~:text=Iridium%20is%20a%20global%20satellite" target="_blank" class="resource-link">Iridium Global Satellite Communications</a></li>
-  <li><a href="https://www.skytrac.ca/resources/magazine/what-is-iridium-certus/" target="_blank" class="resource-link">Skytrac: What is Iridium Certus?</a></li>
-  <li><a href="https://www.thuraya.com/en/products-list" target="_blank" class="resource-link">Thuraya Satellite Products</a></li>
-  <li><a href="https://www.bcsatellite.net/oneweb/" target="_blank" class="resource-link">OneWeb Overview (BC Satellite)</a></li>
-  <li><a href="https://www.satellitetoday.com/mobile-connectivity/2023/01/05/iridium-partners-with-qualcomm-for-chips-that-enable-satellite-to-cell-messaging/" target="_blank" class="resource-link">Iridium & Qualcomm Partnership</a></li>
-</ul>
 
 ---
 transition: fade-out
