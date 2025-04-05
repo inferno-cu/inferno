@@ -186,8 +186,6 @@ transition: slide-left
   <img src="/dlink_top_with_heat_sync.jpg" alt="D-Link Top w/ Heat Sync" class="inferno-img w-32" />
   <img src="/dlink_top_without_heat_sync.jpg" alt="D-Link Top w/o Heat Sync" class="inferno-img w-32" />
 </div>
----
-
 <style>
 .inferno-img {
   border-radius: 1rem;
@@ -215,7 +213,6 @@ transition: slide-left
   text-shadow: 0 0 20px #f59e0b;
 }
 </style>
-
 
 ---
 transition: slide-left
@@ -444,25 +441,33 @@ transition: fade-out
 ---
 transition: fade
 ---
-  
-<div class="grid grid-cols-2 gap-2 items-start w-full">
-  <div class="flex flex-col items-center space-y-6">
+
+# 🛰️ Skytrac Dashboard Screens
+
+<div class="grid grid-cols-1 sm:grid-cols-2 gap-8 items-center justify-center px-4 py-6">
+
+  <div class="flex flex-col items-center space-y-3">
     <img
       src="/skytracs_dl_ss1.png"
-      alt="Additional Image 1"
-      class="w-full max-w-sm h-full"
+      alt="Dashboard View 1"
+      class="rounded-2xl border-2 border-amber-400/30 shadow-[0_0_25px_rgba(251,191,36,0.4)] hover:shadow-[0_0_45px_rgba(251,191,36,0.8)] transition-transform hover:scale-105 max-w-sm"
     />
+    <p class="text-sm text-zinc-400 italic">Skytrac UI panel overview</p>
   </div>
 
-  <div class="flex flex-col items-center space-y-6">
+  <div class="flex flex-col items-center space-y-3">
     <a href="https://www.blueplanet.com/" target="_blank" rel="noopener noreferrer">
       <img
         src="/skytracs_dl_ss2.png"
-        class="w-full max-w-sm h-full"
+        alt="Dashboard View 2"
+        class="rounded-2xl border-2 border-amber-400/30 shadow-[0_0_25px_rgba(251,191,36,0.4)] hover:shadow-[0_0_45px_rgba(251,191,36,0.8)] transition-transform hover:scale-105 max-w-sm"
       />
     </a>
+    <p class="text-sm text-zinc-400 italic">Linked flight data from Blue Planet</p>
   </div>
+
 </div>
+
 
 ---
 
@@ -526,7 +531,7 @@ transition: fade
     <thead>
       <tr>
         <th class="text-left">Features</th>
-        <th><img src="/blue-sky.png" alt="Skylink" class="w-12 h-5 mx-auto" /></th>
+        <th><img src="/blue-sky.png" alt="Skylink" class="w-8 h-8 mx-auto" /></th>
         <th><img src="/skytrac.png" alt="WiFi" class="w-8 h-8 mx-auto" /></th>
         <th><img src="/inferno_logo.png" alt="Dashboard" class="w-8 h-8 mx-auto" /></th>
       </tr>
@@ -598,6 +603,86 @@ transition: fade
 
 layout: center
 class: text-center
+
+---
+transition: fade
+---
+
+<h1 class="text-5xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-amber-400 via-orange-500 to-red-600 mb-8 tracking-widest drop-shadow-[0_0_20px_#f59e0b]">
+  🔥 Challenges Faced
+</h1>
+
+<ul class="text-lg text-zinc-200 space-y-3 max-w-4xl mx-auto animate-fade-up">
+  <li>🧠 Zero-to-none Linux and embedded systems experience for some team members</li>
+  <li>⛰️ Steep learning curve across tools and hardware</li>
+  <li>📚 Midterm season + heavy assignments during dev cycle</li>
+  <li>🎯 Scope of hackathon changed mid-way</li>
+  <li>🛠️ Original plan: build our own OS — later shifted to a provided image</li>
+  <li>❌ OS drivers in the provided image were broken</li>
+  <li>🧬 Got PPP code less than 24 hours before the hackathon</li>
+  <li>💾 SD card was fried — device wouldn’t boot, root cause unclear</li>
+  <li>🔌 Hardware was often unreliable or inconsistent</li>
+</ul>
+---
+transition: fade
+---
+
+<h1 class="text-5xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-yellow-300 via-orange-500 to-red-600 mb-8 tracking-widest drop-shadow-[0_0_20px_#f59e0b]">
+  🛠️ High-Level Tech Stack Used
+</h1>
+
+<ul class="text-lg text-zinc-200 space-y-3 max-w-3xl mx-auto animate-fade-up">
+  <li>✈️ Hully — for project management</li>
+  <li>🎨 Penpot — collaborative design & UI prototyping</li>
+  <li>🔥 Slidev — the cool engine behind this slide deck</li>
+  <li>📚 Fumadocs — documentation from markdown</li>
+  <li>🧬 GitHub — version control, issues, CI/CD</li>
+</ul>
+---
+transition: fade
+layout: center
+class: text-center
+---
+
+# 🔥 The Power of Yet
+
+> “We’re not there… yet.”
+
+- 🧭 Came ready for embedded. Pivoted to presentation.  
+- ⚙️ Faced driver bugs, fried SDs, and broken boots.  
+- 🧠 Learned fast. Adapted faster.  
+- 🚀 Proud of what we built — and what we will build.
+
+<span class="text-amber-300 italic text-xl mt-6 block">
+Inspired by Joe Lee — <span class="text-amber-400 font-semibold">Not yet is power.</span>
+</span>
+
+---
+transition: fade
+---
+
+<h1 class="text-5xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-yellow-300 via-orange-500 to-red-600 mb-8 tracking-widest drop-shadow-[0_0_20px_#f59e0b]">
+  🙏 Special Thanks To
+</h1>
+
+<ul class="text-lg text-zinc-200 space-y-6 max-w-3xl mx-auto animate-fade-up">
+  <li>
+    🎓 <span class="font-semibold text-yellow-200">Carleton University</span><br/>
+    <span class="text-zinc-400 italic">For giving us the opportunity to attend this hackathon</span>
+  </li>
+  <li>
+    🛰️ <span class="font-semibold text-yellow-200">Skytrac</span><br/>
+    <span class="text-zinc-400 italic">
+      For hosting the hackathon, providing hardware, food, and deep technical mentorship
+    </span>
+  </li>
+  <li>
+    💡 <span class="font-semibold text-yellow-200">All Participating Teams</span><br/>
+    <span class="text-zinc-400 italic">For the fierce competition, inspiration, and laughs</span>
+  </li>
+</ul>
+
+
 ---
 
 # 🔥 Thank You to SKYTRAC!
