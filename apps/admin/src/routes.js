@@ -44,6 +44,13 @@ import CallHistory from 'views/Calling/CallHistory'
 import InternetDataRouting from 'views/InternetDataRouting'
 import Log from 'views/System/Log'
 import DiagnosticsDashboard from 'views/System/DiagnosticsDashboard'
+import GeneralSettings from 'views/GeneralSettings'
+import RemoteManagement from 'views/RemoteManagement'
+import SerialToIP from 'views/SerialToIP'
+import SNMP from 'views/SNMP'
+import VoiceExtensions from 'views/VoiceExtensions'
+import Accessories from 'views/Accessories'
+import Advanced from 'views/Advanced'
 
 import {
   ActivityIcon,
@@ -87,13 +94,145 @@ import {
   TagsIcon,
   UsersIcon,
   WaypointsIcon,
-  WifiIcon
+  WifiIcon,
+  ArrowRightLeft,
+  ServerIcon,
+  MessageCircleIcon,
+  PlugIcon,
+  WrenchIcon,
 } from 'lucide-react-native'
 import CustomPlugin from 'views/CustomPlugin'
+import { CellularStatus } from 'components/Dashboard/ConnectionWidgets'
+import { Server } from 'miragejs'
 
 //import { BrandIcons } from 'IconUtils'
 
 const routes = [
+  {
+    path: 'system information',
+    name: 'Status',
+    icon: SignalIcon,
+    component: SystemInformation,
+    layout: 'admin'
+  },  
+  {
+    name: 'Configuration',
+    state: 'netCollapse',
+    views: [
+      {
+        path: 'general settings',
+        name: 'General Settings',
+        icon: CogIcon,
+        component: GeneralSettings,
+        layout: 'admin'
+      },
+      {
+        path: 'connection manager',
+        name: 'Connection Manager',
+        icon: ShuffleIcon,
+        component: InternetDataRouting,
+        layout: 'admin'
+      },
+      {
+        path: 'network',
+        name: 'Network',
+        icon: NetworkIcon,
+        component: Supernetworks,
+        layout: 'admin'
+      },
+      {
+        path: 'firewall',
+        name: 'Firewall',
+        icon: FlameIcon,
+        component: Firewall,
+        hideSimple: true,
+        layout: 'admin'
+      },
+      {
+        path: 'remote management',
+        name: 'Remote Management',
+        icon: GlobeIcon,
+        component: RemoteManagement,
+        hideSimple: true,
+        layout: 'admin'
+      },
+      {
+        path: 'serial to ip',
+        name: 'Serial to IP',
+        icon: ArrowRightLeft,
+        component: SerialToIP,
+        hideSimple: true,
+        layout: 'admin'
+      },
+      {
+      path: 'snmp',
+      name: 'SNMP',
+      icon: ServerIcon,
+      component: SNMP,
+      hideSimple: true,
+      layout: 'admin'
+      },
+      {
+        path: 'voice extensions',
+        name: 'Voice Extensions',
+        icon: ServerIcon,
+        component: VoiceExtensions,
+        hideSimple: true,
+        layout: 'admin'
+        },
+        {
+          path: 'accessories',
+          name: 'Accessories',
+          icon: PuzzleIcon,
+          component: Accessories,
+          hideSimple: true,
+          layout: 'admin'
+          },
+          {
+            path: 'plugins',
+            name: 'Plugins',
+            icon: PlugIcon,
+            component: Plugins,
+            hideSimple: true,
+            layout: 'admin'
+          },
+    ]
+  },
+  {
+    name: 'Data & Tools',
+    state: 'netCollapse',
+    views: [
+      {
+        path: 'calls',
+        name: 'Calls',
+        icon: PhoneCall,
+        component: CallHistory,
+        layout: 'admin'
+      },
+      {
+        path: 'diagnosticsdashboard/',
+        name: 'Diagnostics',
+        icon: WrenchIcon,
+        component: DiagnosticsDashboard,
+        hideSimple: true,
+        layout: 'admin'
+      },
+      {
+        path: 'system log',
+        name: 'System Log',
+        icon: Logs,
+        component: Log,
+        layout: 'admin'
+        },
+        {
+          path: 'advanced',
+          name: 'Advanced',
+          icon: CogIcon,
+          component: Advanced,
+          layout: 'admin'
+          },
+    ]
+  },
   {
     path: 'home',
     name: 'Home',
@@ -432,7 +571,7 @@ const routes = [
         component: DiagnosticsDashboard,
         hideSimple: true,
         layout: 'admin'
-      }
+      },
     ]
   },
   {
