@@ -456,6 +456,214 @@ transition: fade
   ></iframe>
 </div>
 
+
+---
+layout: center
+transition: fade
+---
+
+<style>
+.pdf-frame {
+  width: 60vw; /* Full viewport width */
+  height: 60vh; /* 90% of viewport height for better readability */
+  border: none;
+  background-color: #0f0f0f;
+  animation: fadeIn 1s ease-out;
+}
+@keyframes fadeIn {
+  from { opacity: 0; transform: scale(0.95); }
+  to { opacity: 1; transform: scale(1); }
+}
+</style>
+
+<h1 class="text-5xl font-black text-center text-transparent bg-clip-text bg-gradient-to-r from-yellow-400 via-orange-500 to-red-600 animate-fade-up mb-8 drop-shadow-[0_0_30px_#f59e0b]">
+ Satellite Constellations - 2024 Survey, Trends and Economic Sustainability
+</h1>
+
+<div class="flex justify-center items-center w-full">
+  <iframe
+    src="https://www.newspace.im/assets/Constellations-2024_ErikKulu_IAC2024.pdf"
+    class="pdf-frame"
+    frameborder="0"
+    allowfullscreen
+  ></iframe>
+</div>
+
+<!-- Slide 1: Iridium Certus™ 9770 Overview -->
+---
+layout: center
+transition: slide-left
+---
+
+<style>
+.slide-title {
+  @apply text-5xl font-black text-center text-transparent bg-clip-text bg-gradient-to-r from-yellow-400 via-orange-500 to-red-600 animate-fade-up mb-8 drop-shadow-[0_0_30px_#f59e0b];
+}
+.product-image {
+  @apply w-80 h-auto rounded-xl shadow-xl;
+}
+.text-bullets {
+  @apply text-lg text-zinc-300 max-w-3xl;
+}
+.resource-link {
+  @apply text-amber-400 underline;
+}
+</style>
+
+<h1 class="slide-title">Iridium Certus™ 9770 Overview</h1>
+
+<div class="flex flex-col items-center space-y-6">
+  <img src="https://www.iridium.com/wp-content/uploads/2021/07/IMG_Product_Iridium-Certus-9770-3.jpg" alt="Iridium Certus™ 9770" class="product-image" />
+  <ul class="text-bullets list-disc list-inside">
+    <li>Operates with a constellation of 66 satellites at 780 km altitude (86.4° inclination).</li>
+    <li>Supports both L-band and Ka-band transmissions.</li>
+    <li>Enables satellite telephony and high-speed internet access globally.</li>
+  </ul>
+  <a href="https://www.iridium.com/#:~:text=Iridium%20is%20a%20global%20satellite" target="_blank" class="resource-link">Learn More about Iridium</a>
+</div>
+
+---
+
+<!-- Slide 2: Market & Resource Insights -->
+---
+layout: center
+transition: slide-left
+---
+
+<style>
+.slide-title {
+  @apply text-5xl font-black text-center text-transparent bg-clip-text bg-gradient-to-r from-yellow-400 via-orange-500 to-red-600 animate-fade-up mb-8 drop-shadow-[0_0_30px_#f59e0b];
+}
+.text-content {
+  @apply text-lg text-zinc-300 text-center max-w-3xl;
+}
+.resource-link {
+  @apply text-amber-400 underline;
+}
+</style>
+
+<h1 class="slide-title">Market & Resource Insights</h1>
+
+<div class="flex flex-col items-center space-y-6">
+  <p class="text-content">
+    Skytrac provides in-depth analysis of Iridium Certus, emphasizing its robust performance and strategic market positioning in the satellite communication industry.
+  </p>
+  <a href="https://www.skytrac.ca/resources/magazine/what-is-iridium-certus/" target="_blank" class="resource-link">
+    Read the Skytrac Magazine Article
+  </a>
+</div>
+
+---
+
+<!-- Slide 3: Competitor Analysis – Thuraya -->
+---
+layout: center
+transition: slide-left
+---
+
+<style>
+.slide-title {
+  @apply text-5xl font-black text-center text-transparent bg-clip-text bg-gradient-to-r from-yellow-400 via-orange-500 to-red-600 animate-fade-up mb-8 drop-shadow-[0_0_30px_#f59e0b];
+}
+.text-content {
+  @apply text-lg text-zinc-300 text-center max-w-3xl;
+}
+.resource-link {
+  @apply text-amber-400 underline;
+}
+</style>
+
+<h1 class="slide-title">Competitor Analysis: Thuraya</h1>
+
+<div class="flex flex-col items-center space-y-6">
+  <p class="text-content">
+    Thuraya’s L-band satellite network serves aviation, maritime, and land-based markets with specialized connectivity solutions, positioning itself as a strong competitor in certain regions.
+  </p>
+  <a href="https://www.thuraya.com/en/products-list" target="_blank" class="resource-link">
+    Explore Thuraya Products
+  </a>
+</div>
+
+---
+
+<!-- Slide 4: Collaborators & Further Research -->
+---
+layout: center
+transition: slide-left
+---
+
+<style>
+.slide-title {
+  @apply text-5xl font-black text-center text-transparent bg-clip-text bg-gradient-to-r from-yellow-400 via-orange-500 to-red-600 animate-fade-up mb-8 drop-shadow-[0_0_30px_#f59e0b];
+}
+.text-content {
+  @apply text-lg text-zinc-300 text-center max-w-3xl;
+}
+.resource-link {
+  @apply text-amber-400 underline;
+}
+.pdf-frame {
+  width: 80vw;
+  height: 70vh;
+  border: none;
+  background-color: #0f0f0f;
+  animation: fadeIn 1s ease-out;
+}
+@keyframes fadeIn {
+  from { opacity: 0; transform: scale(0.95); }
+  to { opacity: 1; transform: scale(1); }
+}
+</style>
+
+<h1 class="slide-title">Collaborators & Further Research</h1>
+
+<div class="flex flex-col items-center space-y-6">
+  <p class="text-content">
+    Additional research covers collaborative initiatives in the satellite communications space, including Iridium’s partnership with Qualcomm for satellite-to-cell messaging, and comparisons with emerging networks like OneWeb.
+  </p>
+  <div class="flex flex-col items-center space-y-2">
+    <a href="https://www.bcsatellite.net/oneweb/" target="_blank" class="resource-link">
+      Learn More about OneWeb
+    </a>
+    <a href="https://www.satellitetoday.com/mobile-connectivity/2023/01/05/iridium-partners-with-qualcomm-for-chips-that-enable-satellite-to-cell-messaging/" target="_blank" class="resource-link">
+      Read about Iridium & Qualcomm Partnership
+    </a>
+  </div>
+  <p class="text-sm text-zinc-400 text-center">
+    For an in-depth technical overview, refer to the detailed research document below.
+  </p>
+  <div class="w-full flex justify-center">
+    <iframe src="https://www.newspace.im/assets/Constellations-2024_ErikKulu_IAC2024.pdf" class="pdf-frame" allowfullscreen></iframe>
+  </div>
+</div>
+
+---
+
+<!-- References (Optional) -->
+---
+layout: center
+transition: fade
+---
+
+<style>
+.ref-title {
+  @apply text-4xl font-bold text-center text-amber-500 mb-6;
+}
+.ref-list {
+  @apply text-lg text-zinc-300 list-disc list-inside max-w-3xl;
+}
+</style>
+
+<h1 class="ref-title">References</h1>
+
+<ul class="ref-list">
+  <li><a href="https://www.iridium.com/#:~:text=Iridium%20is%20a%20global%20satellite" target="_blank" class="resource-link">Iridium Global Satellite Communications</a></li>
+  <li><a href="https://www.skytrac.ca/resources/magazine/what-is-iridium-certus/" target="_blank" class="resource-link">Skytrac: What is Iridium Certus?</a></li>
+  <li><a href="https://www.thuraya.com/en/products-list" target="_blank" class="resource-link">Thuraya Satellite Products</a></li>
+  <li><a href="https://www.bcsatellite.net/oneweb/" target="_blank" class="resource-link">OneWeb Overview (BC Satellite)</a></li>
+  <li><a href="https://www.satellitetoday.com/mobile-connectivity/2023/01/05/iridium-partners-with-qualcomm-for-chips-that-enable-satellite-to-cell-messaging/" target="_blank" class="resource-link">Iridium & Qualcomm Partnership</a></li>
+</ul>
+
 ---
 transition: fade-out
 ---
