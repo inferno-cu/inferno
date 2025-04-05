@@ -39,11 +39,11 @@ mdc: true
     Get on the <span class="font-semibold text-amber-400 glow">Infernet</span>.
   </p>
 
-  <div class="absolute flex space-x-2 bottom-6 right-8 animate-fade-in animate-delay-[1200ms]">
+  <div class="absolute flex space-x-1 bottom-4 right-4 animate-fade-in animate-delay-[1200ms]">
     <a 
       href="https://infernet.work" 
       target="_blank" 
-      class="flex items-center space-x-2 px-5 py-2.5 rounded-xl bg-amber-600 text-white text-sm font-semibold shadow-xl hover:shadow-2xl hover:bg-amber-500 transition-transform hover:scale-105"
+      class="flex items-center justify-center w-10 h-10 rounded-xl bg-amber-600 text-white text-sm font-semibold shadow-xl hover:shadow-2xl hover:bg-amber-500 transition-transform hover:scale-105 focus:outline-none"
     >
       <img 
         src="/inferno_logo.png" 
@@ -54,14 +54,19 @@ mdc: true
     <a 
       href="https://docs.infernet.work" 
       target="_blank" 
-      class="flex items-center space-x-2 px-5 py-2.5 rounded-xl bg-amber-600 text-white text-sm font-semibold shadow-xl hover:shadow-2xl hover:bg-amber-500 transition-transform hover:scale-105"
+      class="flex items-center justify-center w-10 h-10 rounded-xl bg-amber-600 text-white text-sm font-semibold shadow-xl hover:shadow-2xl hover:bg-amber-500 transition-transform hover:scale-105 focus:outline-none"
     >
+    <img 
+        src="https://em-content.zobj.net/source/twitter/31/open-book_1f4d6.png" 
+        alt="Documentation" 
+        class="w-5 h-5"
+      />
     <!-- <twemoji-open-book /> -->
     </a>
     <a 
       href="https://arch.infernet.work" 
       target="_blank" 
-      class="flex items-center space-x-2 px-5 py-2.5 rounded-xl bg-amber-600 text-white text-sm font-semibold shadow-xl hover:shadow-2xl hover:bg-amber-500 transition-transform hover:scale-105"
+      class="flex items-center justify-center w-10 h-10 rounded-xl bg-amber-600 text-white text-sm font-semibold shadow-xl hover:shadow-2xl hover:bg-amber-500 transition-transform hover:scale-105 focus:outline-none"
     >
       <img 
         src="https://avatars.githubusercontent.com/u/128791862?s=200&v=4" 
@@ -72,9 +77,14 @@ mdc: true
     <a 
       href="https://github.com/inferno-cu/inferno" 
       target="_blank" 
-      class="flex items-center space-x-2 px-5 py-2.5 rounded-xl bg-amber-600 text-white text-sm font-semibold shadow-xl hover:shadow-2xl hover:bg-amber-500 transition-transform hover:scale-105"
-    >
-    <!-- <logos-github-icon /> -->
+      class="flex items-center justify-center w-10 h-10 rounded-xl bg-amber-600 text-white text-sm font-semibold shadow-xl hover:shadow-2xl hover:bg-amber-500 transition-transform hover:scale-105 focus:outline-none"
+  >
+    <img 
+        src="/GitHub_Invertocat_Dark.png" 
+        alt="Git Hub" 
+        class="w-5 h-5"
+      />
+      <!-- <logos-github-icon /> -->
     </a>
   </div>
 </div>
