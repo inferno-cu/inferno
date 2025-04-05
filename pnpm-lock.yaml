@@ -57,6 +57,15 @@ importers:
       '@eslint/js':
         specifier: ^9.8.0
         version: 9.23.0
+      '@iconify-json/logos':
+        specifier: ^1.2.4
+        version: 1.2.4
+      '@iconify-json/twemoji':
+        specifier: ^1.2.2
+        version: 1.2.2
+      '@iconify-json/uim':
+        specifier: ^1.2.3
+        version: 1.2.3
       '@netlify/edge-functions':
         specifier: ^2.11.1
         version: 2.11.1
@@ -1566,11 +1575,20 @@ packages:
   '@iconify-json/carbon@1.2.8':
     resolution: {integrity: sha512-6xh4YiFBz6qoSnB3XMe23WvjTJroDFXB17J1MbiT7nATFe+70+em1acRXr8hgP/gYpwFMHFc4IvjA/IPTPnTzg==}
 
+  '@iconify-json/logos@1.2.4':
+    resolution: {integrity: sha512-XC4If5D/hbaZvUkTV8iaZuGlQCyG6CNOlaAaJaGa13V5QMYwYjgtKk3vPP8wz3wtTVNVEVk3LRx1fOJz+YnSMw==}
+
   '@iconify-json/ph@1.2.2':
     resolution: {integrity: sha512-PgkEZNtqa8hBGjHXQa4pMwZa93hmfu8FUSjs/nv4oUU6yLsgv+gh9nu28Kqi8Fz9CCVu4hj1MZs9/60J57IzFw==}
 
   '@iconify-json/svg-spinners@1.2.2':
     resolution: {integrity: sha512-DIErwfBWWzLfmAG2oQnbUOSqZhDxlXvr8941itMCrxQoMB0Hiv8Ww6Bln/zIgxwjDvSem2dKJtap+yKKwsB/2A==}
+
+  '@iconify-json/twemoji@1.2.2':
+    resolution: {integrity: sha512-ckWEY5KhIQgdFd9VGvfhecTtYUx3ihXycwlZcEws87LxuvIThMHNBCblrQQ5afhbGMfg21dF+z9F+ODMRDYHMg==}
+
+  '@iconify-json/uim@1.2.3':
+    resolution: {integrity: sha512-rCOU5nrRbcg5s5ZhL9Esoj/acyPeb6hPetVQYMJ18/wJwYsQtcwrFJXy6XOwyFs9TTLnjFGynLJO/TYihOQtDg==}
 
   '@iconify/types@2.0.0':
     resolution: {integrity: sha512-+wluvCrRhXrhyOmRDJ3q8mux9JkKy5SJ/v8ol2tu4FVjyYvtEzkc/3pK15ET6RKg4b4w4BmTk1+gsCUhf21Ykg==}
@@ -13012,11 +13030,23 @@ snapshots:
     dependencies:
       '@iconify/types': 2.0.0
 
+  '@iconify-json/logos@1.2.4':
+    dependencies:
+      '@iconify/types': 2.0.0
+
   '@iconify-json/ph@1.2.2':
     dependencies:
       '@iconify/types': 2.0.0
 
   '@iconify-json/svg-spinners@1.2.2':
+    dependencies:
+      '@iconify/types': 2.0.0
+
+  '@iconify-json/twemoji@1.2.2':
+    dependencies:
+      '@iconify/types': 2.0.0
+
+  '@iconify-json/uim@1.2.3':
     dependencies:
       '@iconify/types': 2.0.0
 
@@ -17023,7 +17053,7 @@ snapshots:
 
   axios@1.8.4:
     dependencies:
-      follow-redirects: 1.15.9(debug@4.4.0)
+      follow-redirects: 1.15.9(debug@4.3.7)
       form-data: 4.0.2
       proxy-from-env: 1.1.0
     transitivePeerDependencies:
@@ -20066,18 +20096,6 @@ snapshots:
 
   http-parser-js@0.5.9: {}
 
-  http-proxy-middleware@2.0.7(@types/express@4.17.21):
-    dependencies:
-      '@types/http-proxy': 1.17.16
-      http-proxy: 1.18.1(debug@4.4.0)
-      is-glob: 4.0.3
-      is-plain-obj: 3.0.0
-      micromatch: 4.0.8
-    optionalDependencies:
-      '@types/express': 4.17.21
-    transitivePeerDependencies:
-      - debug
-
   http-proxy-middleware@2.0.7(@types/express@4.17.21)(debug@4.3.7):
     dependencies:
       '@types/http-proxy': 1.17.16
@@ -20124,7 +20142,7 @@ snapshots:
       corser: 2.0.1
       he: 1.2.0
       html-encoding-sniffer: 3.0.0
-      http-proxy: 1.18.1(debug@4.4.0)
+      http-proxy: 1.18.1(debug@4.3.7)
       mime: 1.6.0
       minimist: 1.2.8
       opener: 1.5.2
@@ -25423,7 +25441,7 @@ snapshots:
       connect-history-api-fallback: 2.0.0
       express: 4.21.2
       graceful-fs: 4.2.11
-      http-proxy-middleware: 2.0.7(@types/express@4.17.21)
+      http-proxy-middleware: 2.0.7(@types/express@4.17.21)(debug@4.3.7)
       ipaddr.js: 2.2.0
       launch-editor: 2.10.0
       open: 10.1.0
