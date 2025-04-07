@@ -1,6 +1,9 @@
 // @ts-check
 
+import { composePlugins, withNx } from '@nx/next'
 import { createMDX } from 'fumadocs-mdx/next';
+
+const withMDX = createMDX()
 
 const defaultImageHostnames = [
   'avatars.githubusercontent.com',
@@ -28,8 +31,15 @@ const defaultImageHostnames = [
   'huly.io',
 ]
 
-/** @type {import('next').NextConfig} */
-const config = {
+/**
+ * @type {import('@nx/next/plugins/with-nx').WithNxOptions}
+ */
+const nextConfig = {
+  nx: {
+    // Set this to true if you would like to use SVGR
+    // See: https:github.com/gregberge/svgr
+    svgr: false,
+  },
   reactStrictMode: true,
   typescript: {
     // !! WARN !!
@@ -49,8 +59,12 @@ const config = {
     })),
   },
   output: "standalone"
-};
+}
 
-const withMDX = createMDX();
+const plugins = [
+  // Add more Next.js plugins to this list if needed.
+  withNx,
+  withMDX,
+]
 
-export default withMDX(config);
+export default composePlugins(...plugins)(nextConfig)

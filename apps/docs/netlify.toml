@@ -1,6 +1,0 @@
-[build]
-command = "pnpm nx build docs --verbose --prod"
-publish = "apps/docs/.next"
-
-[build.environment]
-NODE_VERSION = "22"

@@ -18,6 +18,8 @@
                 "clsx": "^2.1.1",
                 "motion": "^12.6.3",
                 "fumadocs-mdx": "11.5.7",
+                "fumadocs-core": "15.1.2",
+                "fumadocs-ui": "15.1.2",
                 "next": "15.2.3",
                 "react": "^19.1.0",
                 "react-dom": "^19.1.0",
@@ -32,7 +34,6 @@
                 "@iconify-json/logos": "^1.2.4",
                 "@iconify-json/twemoji": "^1.2.2",
                 "@iconify-json/uim": "^1.2.3",
-                "@netlify/edge-functions": "^2.11.1",
                 "@nx/devkit": "20.6.2",
                 "@nx/eslint": "20.6.2",
                 "@nx/eslint-plugin": "20.6.2",
@@ -60,14 +61,11 @@
                 "eslint-plugin-jsx-a11y": "6.10.1",
                 "eslint-plugin-react": "7.35.0",
                 "eslint-plugin-react-hooks": "5.0.0",
-                "fumadocs-core": "15.1.2",
                 "fumadocs-docgen": "^2.0.0",
-                "fumadocs-ui": "15.1.2",
                 "html-webpack-plugin": "^5.6.3",
                 "katex": "^0.16.21",
                 "likec4": "^1.27.3",
                 "lucide-react": "^0.483.0",
-                "netlify-cli": "^19.1.5",
                 "nx": "20.6.2",
                 "postcss": "^8.5.3",
                 "prettier": "^2.8.8",
@@ -80,13 +78,10 @@
                 "typescript-eslint": "^8.29.1"
         },
         "pnpm": {
-                "ignoredBuiltDependencies": [
-                        "@parcel/watcher",
-                        "esbuild"
-                ],
                 "onlyBuiltDependencies": [
+                        "@parcel/watcher",
+                        "esbuild",
                         "@swc/core",
-                        "netlify-cli",
                         "nx",
                         "sharp",
                         "unix-dgram"

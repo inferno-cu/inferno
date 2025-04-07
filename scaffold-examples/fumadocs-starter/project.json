@@ -1,0 +1,7 @@
+{
+  "name": "fumadocs-starter",
+  "$schema": "../../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "scaffold-examples/fumadocs-starter",
+  "projectType": "application",
+  "tags": []
+}
