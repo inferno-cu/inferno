@@ -1,9 +1,11 @@
+// @ts-check
+
 import { createMDX } from 'fumadocs-mdx/next';
 
 const defaultImageHostnames = [
   'avatars.githubusercontent.com',
   'raw.githubusercontent.com',
-'media.licdn.com',
+  'media.licdn.com',
   'www.linuxfoundation.org',
   'icons.veryicon.com',
   'logowik.com',
@@ -26,8 +28,6 @@ const defaultImageHostnames = [
   'huly.io',
 ]
 
-const withMDX = createMDX();
-
 /** @type {import('next').NextConfig} */
 const config = {
   reactStrictMode: true,
@@ -41,14 +41,16 @@ const config = {
   eslint: {
     ignoreDuringBuilds: true
   },
-  output: 'standalone',
   images: {
     remotePatterns: defaultImageHostnames.map(hostname => ({
       protocol: 'https',
       // eslint-disable-next-line node/prefer-global/process
-      hostname,
+      hostname: process.env.ALLOWED_IMAGE_HOSTNAME || hostname,
     })),
   },
+  output: "standalone"
 };
+
+const withMDX = createMDX();
 
 export default withMDX(config);

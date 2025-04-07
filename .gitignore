@@ -10,6 +10,7 @@ test-results
 apps/docs/node_modules
 apps/slides/node_modules
 apps/admin/node_modules
+apps/web/node_modules
 /.pnp
 .pnp.js
 
@@ -59,8 +60,14 @@ generated/
 out
 
 pgdata
-apps/web/node_modules
 
 .vite-inspect
 .remote-assets
 components.d.ts
+# Local Netlify folder
+.netlify
+
+# generated content
+.contentlayer
+.content-collections
+.source

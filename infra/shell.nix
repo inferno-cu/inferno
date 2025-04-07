@@ -2,7 +2,7 @@
 
 let
   logoPath = "../apps/docs/public/inferno_symbol_3.png";
-  teamLogoPath = "../apps/docs/assets/inferno_logo_full.png";
+  teamLogoPath = "../libs/shared/assets/inferno_logo_full.png";
   pgLog = "$PGDATA/postgresql.log";
 
 in pkgs.mkShell {

@@ -1,27 +1,16 @@
 {
     "compilerOptions": {
-    "declaration": false,
-    "importHelpers": true,
-    "sourceMap": true,
-    "skipDefaultLibCheck": true,
-    "skipLibCheck": true,
-        "declarationMap": true,
-        "emitDeclarationOnly": true,
-        "isolatedModules": true,
+        "target": "es2015",
         "lib": [
-            "es2022"
+            "es2020",
+            "dom"
         ],
-        "module": "esnext",
-        "moduleResolution": "bundler",
-        "noEmitOnError": true,
-        "noFallthroughCasesInSwitch": true,
-        "noImplicitOverride": true,
-        "noImplicitReturns": true,
-        "noUnusedLocals": true,
-        "strict": true,
-        "target": "es2022",
+        "emitDecoratorMetadata": true,
+        "experimentalDecorators": true,
         "baseUrl": ".",
         "rootDir": ".",
+        "module": "esnext",
+        "moduleResolution": "node",
         "paths": {
             "@/docs": [
                 "libs/docs/index.ts"
@@ -35,11 +24,16 @@
             "@/shared/*": [
                 "libs/shared/*"
             ]
-        }
+        },
+        "declaration": false,
+        "importHelpers": true,
+        "sourceMap": true,
+        "skipDefaultLibCheck": true,
+        "skipLibCheck": true
     },
-  "exclude": [
-    "node_modules",
-    "tmp"
-  ],
-  "compileOnSave": false
+    "exclude": [
+        "node_modules",
+        "tmp"
+    ],
+    "compileOnSave": false
 }
